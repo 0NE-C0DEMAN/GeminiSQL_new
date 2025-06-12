@@ -1,0 +1,14 @@
+streamlit
+duckdb
+pandas
+duckdb-engine
+langchain
+langchain-google-genai
+langchain-community
+langchain-core
+sentence-transformers
+torch
+joblib
+openpyxl
+xlrd
+scikit-learn

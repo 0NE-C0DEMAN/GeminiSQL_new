@@ -1,0 +1,583 @@
+{
+  "tables": {
+    "external_aggregated_api_usage": {
+      "columns": [
+        "_PARTITION_DATE",
+        "project_number",
+        "method_name",
+        "total_hits",
+        "hits_success",
+        "hits_fail",
+        "hits_error_code_1",
+        "hits_error_code_2",
+        "hits_error_code_3",
+        "hits_error_code_4",
+        "hits_error_code_5",
+        "hits_error_code_6",
+        "hits_error_code_7",
+        "hits_error_code_8",
+        "hits_error_code_9",
+        "hits_error_code_10",
+        "hits_error_code_11",
+        "hits_error_code_12",
+        "hits_error_code_13",
+        "hits_error_code_14",
+        "hits_error_code_15",
+        "hits_error_code_16",
+        "total_quota",
+        "quota_success",
+        "quota_fail",
+        "oauth_users_per_method",
+        "oauth_users_per_day",
+        "quota_allocated",
+        "internal_project",
+        "quota_bucket",
+        "api_use_case",
+        "api_business_classification",
+        "research",
+        "research_topic",
+        "research_subtopic",
+        "compliance_status",
+        "audit_completed"
+      ],
+      "primary_keys": [],
+      "foreign_keys": []
+    },
+    "ytflow_api_tickets": {
+      "columns": [
+        "ticket_id",
+        "project_number",
+        "multiple_project_list",
+        "developer_organization_name",
+        "ticket_status",
+        "ticket_classification",
+        "ticket_compliance_status",
+        "create_time",
+        "resolve_time",
+        "business_classification",
+        "business_use_case",
+        "labels",
+        "violations",
+        "investigate_reason",
+        "additional_quota_requested",
+        "ticket_progress_stage",
+        "state",
+        "developer_name",
+        "developer_website",
+        "developer_email_address",
+        "country_code",
+        "google_representative",
+        "is_partner",
+        "create_date",
+        "resolve_date",
+        "public_private_api",
+        "derived_metrics",
+        "change_control_date",
+        "change_control_aquiror_rep_name",
+        "developer_changed_use_case_form",
+        "changed_use_case_by_auditor",
+        "assignee",
+        "agent_ldap",
+        "agent_team",
+        "duplicate_of_ticket",
+        "agent_audit_decision",
+        "ticket_decision_reason",
+        "need_agent_review",
+        "reason_for_rejection",
+        "YTRP_previous_approval",
+        "YTRP_details_changed",
+        "YTRP_organization_manual_entry",
+        "YTRP_researcher_country",
+        "YTRP_researcher_job_title",
+        "YTRP_job_title_manual_entry",
+        "YTRP_research_title",
+        "YTRP_field_of_research",
+        "YTRP_research_proposal",
+        "YTRP_research_category",
+        "YTRP_research_topic",
+        "YTRP_research_subtopic",
+        "YTRP_sponsored_entity_yes_no",
+        "YTRP_sponsored_entity",
+        "YTRP_sanctions_approval",
+        "YTRP_government_approval",
+        "YTRP_research_start_date",
+        "YTRP_research_publication_date"
+      ],
+      "primary_keys": [],
+      "foreign_keys": []
+    }
+  },
+  "relationships": [],
+  "column_info": {
+    "external_aggregated_api_usage._PARTITION_DATE": {
+      "table": "external_aggregated_api_usage",
+      "column": "_PARTITION_DATE",
+      "full_name": "external_aggregated_api_usage._PARTITION_DATE"
+    },
+    "external_aggregated_api_usage.project_number": {
+      "table": "external_aggregated_api_usage",
+      "column": "project_number",
+      "full_name": "external_aggregated_api_usage.project_number"
+    },
+    "external_aggregated_api_usage.method_name": {
+      "table": "external_aggregated_api_usage",
+      "column": "method_name",
+      "full_name": "external_aggregated_api_usage.method_name"
+    },
+    "external_aggregated_api_usage.total_hits": {
+      "table": "external_aggregated_api_usage",
+      "column": "total_hits",
+      "full_name": "external_aggregated_api_usage.total_hits"
+    },
+    "external_aggregated_api_usage.hits_success": {
+      "table": "external_aggregated_api_usage",
+      "column": "hits_success",
+      "full_name": "external_aggregated_api_usage.hits_success"
+    },
+    "external_aggregated_api_usage.hits_fail": {
+      "table": "external_aggregated_api_usage",
+      "column": "hits_fail",
+      "full_name": "external_aggregated_api_usage.hits_fail"
+    },
+    "external_aggregated_api_usage.hits_error_code_1": {
+      "table": "external_aggregated_api_usage",
+      "column": "hits_error_code_1",
+      "full_name": "external_aggregated_api_usage.hits_error_code_1"
+    },
+    "external_aggregated_api_usage.hits_error_code_2": {
+      "table": "external_aggregated_api_usage",
+      "column": "hits_error_code_2",
+      "full_name": "external_aggregated_api_usage.hits_error_code_2"
+    },
+    "external_aggregated_api_usage.hits_error_code_3": {
+      "table": "external_aggregated_api_usage",
+      "column": "hits_error_code_3",
+      "full_name": "external_aggregated_api_usage.hits_error_code_3"
+    },
+    "external_aggregated_api_usage.hits_error_code_4": {
+      "table": "external_aggregated_api_usage",
+      "column": "hits_error_code_4",
+      "full_name": "external_aggregated_api_usage.hits_error_code_4"
+    },
+    "external_aggregated_api_usage.hits_error_code_5": {
+      "table": "external_aggregated_api_usage",
+      "column": "hits_error_code_5",
+      "full_name": "external_aggregated_api_usage.hits_error_code_5"
+    },
+    "external_aggregated_api_usage.hits_error_code_6": {
+      "table": "external_aggregated_api_usage",
+      "column": "hits_error_code_6",
+      "full_name": "external_aggregated_api_usage.hits_error_code_6"
+    },
+    "external_aggregated_api_usage.hits_error_code_7": {
+      "table": "external_aggregated_api_usage",
+      "column": "hits_error_code_7",
+      "full_name": "external_aggregated_api_usage.hits_error_code_7"
+    },
+    "external_aggregated_api_usage.hits_error_code_8": {
+      "table": "external_aggregated_api_usage",
+      "column": "hits_error_code_8",
+      "full_name": "external_aggregated_api_usage.hits_error_code_8"
+    },
+    "external_aggregated_api_usage.hits_error_code_9": {
+      "table": "external_aggregated_api_usage",
+      "column": "hits_error_code_9",
+      "full_name": "external_aggregated_api_usage.hits_error_code_9"
+    },
+    "external_aggregated_api_usage.hits_error_code_10": {
+      "table": "external_aggregated_api_usage",
+      "column": "hits_error_code_10",
+      "full_name": "external_aggregated_api_usage.hits_error_code_10"
+    },
+    "external_aggregated_api_usage.hits_error_code_11": {
+      "table": "external_aggregated_api_usage",
+      "column": "hits_error_code_11",
+      "full_name": "external_aggregated_api_usage.hits_error_code_11"
+    },
+    "external_aggregated_api_usage.hits_error_code_12": {
+      "table": "external_aggregated_api_usage",
+      "column": "hits_error_code_12",
+      "full_name": "external_aggregated_api_usage.hits_error_code_12"
+    },
+    "external_aggregated_api_usage.hits_error_code_13": {
+      "table": "external_aggregated_api_usage",
+      "column": "hits_error_code_13",
+      "full_name": "external_aggregated_api_usage.hits_error_code_13"
+    },
+    "external_aggregated_api_usage.hits_error_code_14": {
+      "table": "external_aggregated_api_usage",
+      "column": "hits_error_code_14",
+      "full_name": "external_aggregated_api_usage.hits_error_code_14"
+    },
+    "external_aggregated_api_usage.hits_error_code_15": {
+      "table": "external_aggregated_api_usage",
+      "column": "hits_error_code_15",
+      "full_name": "external_aggregated_api_usage.hits_error_code_15"
+    },
+    "external_aggregated_api_usage.hits_error_code_16": {
+      "table": "external_aggregated_api_usage",
+      "column": "hits_error_code_16",
+      "full_name": "external_aggregated_api_usage.hits_error_code_16"
+    },
+    "external_aggregated_api_usage.total_quota": {
+      "table": "external_aggregated_api_usage",
+      "column": "total_quota",
+      "full_name": "external_aggregated_api_usage.total_quota"
+    },
+    "external_aggregated_api_usage.quota_success": {
+      "table": "external_aggregated_api_usage",
+      "column": "quota_success",
+      "full_name": "external_aggregated_api_usage.quota_success"
+    },
+    "external_aggregated_api_usage.quota_fail": {
+      "table": "external_aggregated_api_usage",
+      "column": "quota_fail",
+      "full_name": "external_aggregated_api_usage.quota_fail"
+    },
+    "external_aggregated_api_usage.oauth_users_per_method": {
+      "table": "external_aggregated_api_usage",
+      "column": "oauth_users_per_method",
+      "full_name": "external_aggregated_api_usage.oauth_users_per_method"
+    },
+    "external_aggregated_api_usage.oauth_users_per_day": {
+      "table": "external_aggregated_api_usage",
+      "column": "oauth_users_per_day",
+      "full_name": "external_aggregated_api_usage.oauth_users_per_day"
+    },
+    "external_aggregated_api_usage.quota_allocated": {
+      "table": "external_aggregated_api_usage",
+      "column": "quota_allocated",
+      "full_name": "external_aggregated_api_usage.quota_allocated"
+    },
+    "external_aggregated_api_usage.internal_project": {
+      "table": "external_aggregated_api_usage",
+      "column": "internal_project",
+      "full_name": "external_aggregated_api_usage.internal_project"
+    },
+    "external_aggregated_api_usage.quota_bucket": {
+      "table": "external_aggregated_api_usage",
+      "column": "quota_bucket",
+      "full_name": "external_aggregated_api_usage.quota_bucket"
+    },
+    "external_aggregated_api_usage.api_use_case": {
+      "table": "external_aggregated_api_usage",
+      "column": "api_use_case",
+      "full_name": "external_aggregated_api_usage.api_use_case"
+    },
+    "external_aggregated_api_usage.api_business_classification": {
+      "table": "external_aggregated_api_usage",
+      "column": "api_business_classification",
+      "full_name": "external_aggregated_api_usage.api_business_classification"
+    },
+    "external_aggregated_api_usage.research": {
+      "table": "external_aggregated_api_usage",
+      "column": "research",
+      "full_name": "external_aggregated_api_usage.research"
+    },
+    "external_aggregated_api_usage.research_topic": {
+      "table": "external_aggregated_api_usage",
+      "column": "research_topic",
+      "full_name": "external_aggregated_api_usage.research_topic"
+    },
+    "external_aggregated_api_usage.research_subtopic": {
+      "table": "external_aggregated_api_usage",
+      "column": "research_subtopic",
+      "full_name": "external_aggregated_api_usage.research_subtopic"
+    },
+    "external_aggregated_api_usage.compliance_status": {
+      "table": "external_aggregated_api_usage",
+      "column": "compliance_status",
+      "full_name": "external_aggregated_api_usage.compliance_status"
+    },
+    "external_aggregated_api_usage.audit_completed": {
+      "table": "external_aggregated_api_usage",
+      "column": "audit_completed",
+      "full_name": "external_aggregated_api_usage.audit_completed"
+    },
+    "ytflow_api_tickets.ticket_id": {
+      "table": "ytflow_api_tickets",
+      "column": "ticket_id",
+      "full_name": "ytflow_api_tickets.ticket_id"
+    },
+    "ytflow_api_tickets.project_number": {
+      "table": "ytflow_api_tickets",
+      "column": "project_number",
+      "full_name": "ytflow_api_tickets.project_number"
+    },
+    "ytflow_api_tickets.multiple_project_list": {
+      "table": "ytflow_api_tickets",
+      "column": "multiple_project_list",
+      "full_name": "ytflow_api_tickets.multiple_project_list"
+    },
+    "ytflow_api_tickets.developer_organization_name": {
+      "table": "ytflow_api_tickets",
+      "column": "developer_organization_name",
+      "full_name": "ytflow_api_tickets.developer_organization_name"
+    },
+    "ytflow_api_tickets.ticket_status": {
+      "table": "ytflow_api_tickets",
+      "column": "ticket_status",
+      "full_name": "ytflow_api_tickets.ticket_status"
+    },
+    "ytflow_api_tickets.ticket_classification": {
+      "table": "ytflow_api_tickets",
+      "column": "ticket_classification",
+      "full_name": "ytflow_api_tickets.ticket_classification"
+    },
+    "ytflow_api_tickets.ticket_compliance_status": {
+      "table": "ytflow_api_tickets",
+      "column": "ticket_compliance_status",
+      "full_name": "ytflow_api_tickets.ticket_compliance_status"
+    },
+    "ytflow_api_tickets.create_time": {
+      "table": "ytflow_api_tickets",
+      "column": "create_time",
+      "full_name": "ytflow_api_tickets.create_time"
+    },
+    "ytflow_api_tickets.resolve_time": {
+      "table": "ytflow_api_tickets",
+      "column": "resolve_time",
+      "full_name": "ytflow_api_tickets.resolve_time"
+    },
+    "ytflow_api_tickets.business_classification": {
+      "table": "ytflow_api_tickets",
+      "column": "business_classification",
+      "full_name": "ytflow_api_tickets.business_classification"
+    },
+    "ytflow_api_tickets.business_use_case": {
+      "table": "ytflow_api_tickets",
+      "column": "business_use_case",
+      "full_name": "ytflow_api_tickets.business_use_case"
+    },
+    "ytflow_api_tickets.labels": {
+      "table": "ytflow_api_tickets",
+      "column": "labels",
+      "full_name": "ytflow_api_tickets.labels"
+    },
+    "ytflow_api_tickets.violations": {
+      "table": "ytflow_api_tickets",
+      "column": "violations",
+      "full_name": "ytflow_api_tickets.violations"
+    },
+    "ytflow_api_tickets.investigate_reason": {
+      "table": "ytflow_api_tickets",
+      "column": "investigate_reason",
+      "full_name": "ytflow_api_tickets.investigate_reason"
+    },
+    "ytflow_api_tickets.additional_quota_requested": {
+      "table": "ytflow_api_tickets",
+      "column": "additional_quota_requested",
+      "full_name": "ytflow_api_tickets.additional_quota_requested"
+    },
+    "ytflow_api_tickets.ticket_progress_stage": {
+      "table": "ytflow_api_tickets",
+      "column": "ticket_progress_stage",
+      "full_name": "ytflow_api_tickets.ticket_progress_stage"
+    },
+    "ytflow_api_tickets.state": {
+      "table": "ytflow_api_tickets",
+      "column": "state",
+      "full_name": "ytflow_api_tickets.state"
+    },
+    "ytflow_api_tickets.developer_name": {
+      "table": "ytflow_api_tickets",
+      "column": "developer_name",
+      "full_name": "ytflow_api_tickets.developer_name"
+    },
+    "ytflow_api_tickets.developer_website": {
+      "table": "ytflow_api_tickets",
+      "column": "developer_website",
+      "full_name": "ytflow_api_tickets.developer_website"
+    },
+    "ytflow_api_tickets.developer_email_address": {
+      "table": "ytflow_api_tickets",
+      "column": "developer_email_address",
+      "full_name": "ytflow_api_tickets.developer_email_address"
+    },
+    "ytflow_api_tickets.country_code": {
+      "table": "ytflow_api_tickets",
+      "column": "country_code",
+      "full_name": "ytflow_api_tickets.country_code"
+    },
+    "ytflow_api_tickets.google_representative": {
+      "table": "ytflow_api_tickets",
+      "column": "google_representative",
+      "full_name": "ytflow_api_tickets.google_representative"
+    },
+    "ytflow_api_tickets.is_partner": {
+      "table": "ytflow_api_tickets",
+      "column": "is_partner",
+      "full_name": "ytflow_api_tickets.is_partner"
+    },
+    "ytflow_api_tickets.create_date": {
+      "table": "ytflow_api_tickets",
+      "column": "create_date",
+      "full_name": "ytflow_api_tickets.create_date"
+    },
+    "ytflow_api_tickets.resolve_date": {
+      "table": "ytflow_api_tickets",
+      "column": "resolve_date",
+      "full_name": "ytflow_api_tickets.resolve_date"
+    },
+    "ytflow_api_tickets.public_private_api": {
+      "table": "ytflow_api_tickets",
+      "column": "public_private_api",
+      "full_name": "ytflow_api_tickets.public_private_api"
+    },
+    "ytflow_api_tickets.derived_metrics": {
+      "table": "ytflow_api_tickets",
+      "column": "derived_metrics",
+      "full_name": "ytflow_api_tickets.derived_metrics"
+    },
+    "ytflow_api_tickets.change_control_date": {
+      "table": "ytflow_api_tickets",
+      "column": "change_control_date",
+      "full_name": "ytflow_api_tickets.change_control_date"
+    },
+    "ytflow_api_tickets.change_control_aquiror_rep_name": {
+      "table": "ytflow_api_tickets",
+      "column": "change_control_aquiror_rep_name",
+      "full_name": "ytflow_api_tickets.change_control_aquiror_rep_name"
+    },
+    "ytflow_api_tickets.developer_changed_use_case_form": {
+      "table": "ytflow_api_tickets",
+      "column": "developer_changed_use_case_form",
+      "full_name": "ytflow_api_tickets.developer_changed_use_case_form"
+    },
+    "ytflow_api_tickets.changed_use_case_by_auditor": {
+      "table": "ytflow_api_tickets",
+      "column": "changed_use_case_by_auditor",
+      "full_name": "ytflow_api_tickets.changed_use_case_by_auditor"
+    },
+    "ytflow_api_tickets.assignee": {
+      "table": "ytflow_api_tickets",
+      "column": "assignee",
+      "full_name": "ytflow_api_tickets.assignee"
+    },
+    "ytflow_api_tickets.agent_ldap": {
+      "table": "ytflow_api_tickets",
+      "column": "agent_ldap",
+      "full_name": "ytflow_api_tickets.agent_ldap"
+    },
+    "ytflow_api_tickets.agent_team": {
+      "table": "ytflow_api_tickets",
+      "column": "agent_team",
+      "full_name": "ytflow_api_tickets.agent_team"
+    },
+    "ytflow_api_tickets.duplicate_of_ticket": {
+      "table": "ytflow_api_tickets",
+      "column": "duplicate_of_ticket",
+      "full_name": "ytflow_api_tickets.duplicate_of_ticket"
+    },
+    "ytflow_api_tickets.agent_audit_decision": {
+      "table": "ytflow_api_tickets",
+      "column": "agent_audit_decision",
+      "full_name": "ytflow_api_tickets.agent_audit_decision"
+    },
+    "ytflow_api_tickets.ticket_decision_reason": {
+      "table": "ytflow_api_tickets",
+      "column": "ticket_decision_reason",
+      "full_name": "ytflow_api_tickets.ticket_decision_reason"
+    },
+    "ytflow_api_tickets.need_agent_review": {
+      "table": "ytflow_api_tickets",
+      "column": "need_agent_review",
+      "full_name": "ytflow_api_tickets.need_agent_review"
+    },
+    "ytflow_api_tickets.reason_for_rejection": {
+      "table": "ytflow_api_tickets",
+      "column": "reason_for_rejection",
+      "full_name": "ytflow_api_tickets.reason_for_rejection"
+    },
+    "ytflow_api_tickets.YTRP_previous_approval": {
+      "table": "ytflow_api_tickets",
+      "column": "YTRP_previous_approval",
+      "full_name": "ytflow_api_tickets.YTRP_previous_approval"
+    },
+    "ytflow_api_tickets.YTRP_details_changed": {
+      "table": "ytflow_api_tickets",
+      "column": "YTRP_details_changed",
+      "full_name": "ytflow_api_tickets.YTRP_details_changed"
+    },
+    "ytflow_api_tickets.YTRP_organization_manual_entry": {
+      "table": "ytflow_api_tickets",
+      "column": "YTRP_organization_manual_entry",
+      "full_name": "ytflow_api_tickets.YTRP_organization_manual_entry"
+    },
+    "ytflow_api_tickets.YTRP_researcher_country": {
+      "table": "ytflow_api_tickets",
+      "column": "YTRP_researcher_country",
+      "full_name": "ytflow_api_tickets.YTRP_researcher_country"
+    },
+    "ytflow_api_tickets.YTRP_researcher_job_title": {
+      "table": "ytflow_api_tickets",
+      "column": "YTRP_researcher_job_title",
+      "full_name": "ytflow_api_tickets.YTRP_researcher_job_title"
+    },
+    "ytflow_api_tickets.YTRP_job_title_manual_entry": {
+      "table": "ytflow_api_tickets",
+      "column": "YTRP_job_title_manual_entry",
+      "full_name": "ytflow_api_tickets.YTRP_job_title_manual_entry"
+    },
+    "ytflow_api_tickets.YTRP_research_title": {
+      "table": "ytflow_api_tickets",
+      "column": "YTRP_research_title",
+      "full_name": "ytflow_api_tickets.YTRP_research_title"
+    },
+    "ytflow_api_tickets.YTRP_field_of_research": {
+      "table": "ytflow_api_tickets",
+      "column": "YTRP_field_of_research",
+      "full_name": "ytflow_api_tickets.YTRP_field_of_research"
+    },
+    "ytflow_api_tickets.YTRP_research_proposal": {
+      "table": "ytflow_api_tickets",
+      "column": "YTRP_research_proposal",
+      "full_name": "ytflow_api_tickets.YTRP_research_proposal"
+    },
+    "ytflow_api_tickets.YTRP_research_category": {
+      "table": "ytflow_api_tickets",
+      "column": "YTRP_research_category",
+      "full_name": "ytflow_api_tickets.YTRP_research_category"
+    },
+    "ytflow_api_tickets.YTRP_research_topic": {
+      "table": "ytflow_api_tickets",
+      "column": "YTRP_research_topic",
+      "full_name": "ytflow_api_tickets.YTRP_research_topic"
+    },
+    "ytflow_api_tickets.YTRP_research_subtopic": {
+      "table": "ytflow_api_tickets",
+      "column": "YTRP_research_subtopic",
+      "full_name": "ytflow_api_tickets.YTRP_research_subtopic"
+    },
+    "ytflow_api_tickets.YTRP_sponsored_entity_yes_no": {
+      "table": "ytflow_api_tickets",
+      "column": "YTRP_sponsored_entity_yes_no",
+      "full_name": "ytflow_api_tickets.YTRP_sponsored_entity_yes_no"
+    },
+    "ytflow_api_tickets.YTRP_sponsored_entity": {
+      "table": "ytflow_api_tickets",
+      "column": "YTRP_sponsored_entity",
+      "full_name": "ytflow_api_tickets.YTRP_sponsored_entity"
+    },
+    "ytflow_api_tickets.YTRP_sanctions_approval": {
+      "table": "ytflow_api_tickets",
+      "column": "YTRP_sanctions_approval",
+      "full_name": "ytflow_api_tickets.YTRP_sanctions_approval"
+    },
+    "ytflow_api_tickets.YTRP_government_approval": {
+      "table": "ytflow_api_tickets",
+      "column": "YTRP_government_approval",
+      "full_name": "ytflow_api_tickets.YTRP_government_approval"
+    },
+    "ytflow_api_tickets.YTRP_research_start_date": {
+      "table": "ytflow_api_tickets",
+      "column": "YTRP_research_start_date",
+      "full_name": "ytflow_api_tickets.YTRP_research_start_date"
+    },
+    "ytflow_api_tickets.YTRP_research_publication_date": {
+      "table": "ytflow_api_tickets",
+      "column": "YTRP_research_publication_date",
+      "full_name": "ytflow_api_tickets.YTRP_research_publication_date"
+    }
+  }
+}

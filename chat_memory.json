@@ -1,0 +1,1967 @@
+{
+    "chat_history": [
+        {
+            "role": "user",
+            "content": "Give me the valid quota ticket details of the company ViewStats"
+        },
+        {
+            "role": "assistant",
+            "content": {
+                "sql_query": "SELECT\n  ticket_id,\n  project_number,\n  developer_organization_name,\n  ticket_status,\n  ticket_classification,\n  ticket_compliance_status,\n  create_date,\n  resolve_date,\n  additional_quota_requested\nFROM ytflow_api_tickets\nWHERE\n  LOWER(developer_organization_name) = LOWER('ViewStats')\n  AND LOWER(ticket_classification) = LOWER('quota')\nLIMIT 100;",
+                "columns_used": [
+                    "resolve_date",
+                    "ticket_status",
+                    "developer_organization_name",
+                    "additional_quota_requested",
+                    "ticket_classification",
+                    "project_number",
+                    "ticket_id",
+                    "ticket_compliance_status",
+                    "create_date"
+                ],
+                "feedback": "corrected",
+                "corrected_query": "SELECT \n*\nFROM ytflow_api_tickets\nWHERE lower(developer_website) LIKE '%viewstats%' AND ticket_compliance_status = 'TRUST'\n",
+                "corrected_columns": [],
+                "column_mapping": {
+                    "resolve_date": -2,
+                    "ticket_status": -2,
+                    "developer_organization_name": -2,
+                    "additional_quota_requested": -2,
+                    "ticket_classification": -2,
+                    "project_number": -2,
+                    "ticket_id": -2,
+                    "ticket_compliance_status": -2,
+                    "create_date": -2
+                },
+                "result": {
+                    "index": [],
+                    "columns": [
+                        "ticket_id",
+                        "project_number",
+                        "developer_organization_name",
+                        "ticket_status",
+                        "ticket_classification",
+                        "ticket_compliance_status",
+                        "create_date",
+                        "resolve_date",
+                        "additional_quota_requested"
+                    ],
+                    "data": []
+                },
+                "value_mapping": {
+                    "ticket_compliance_status": "TRUST"
+                }
+            }
+        },
+        {
+            "role": "user",
+            "content": "Give me the valid quota ticket details of the company spotter"
+        },
+        {
+            "role": "assistant",
+            "content": {
+                "sql_query": "SELECT \n*\nFROM ytflow_api_tickets\nWHERE lower(developer_website) LIKE '%spotter%' AND ticket_compliance_status = 'TRUST'",
+                "columns_used": [],
+                "feedback": "correct",
+                "column_mapping": {},
+                "result": {
+                    "index": [
+                        0,
+                        1,
+                        2
+                    ],
+                    "columns": [
+                        "ticket_id",
+                        "project_number",
+                        "multiple_project_list",
+                        "developer_organization_name",
+                        "ticket_status",
+                        "ticket_classification",
+                        "ticket_compliance_status",
+                        "create_time",
+                        "resolve_time",
+                        "business_classification",
+                        "business_use_case",
+                        "labels",
+                        "violations",
+                        "investigate_reason",
+                        "additional_quota_requested",
+                        "ticket_progress_stage",
+                        "state",
+                        "developer_name",
+                        "developer_website",
+                        "developer_email_address",
+                        "country_code",
+                        "google_representative",
+                        "is_partner",
+                        "create_date",
+                        "resolve_date",
+                        "public_private_api",
+                        "derived_metrics",
+                        "change_control_date",
+                        "change_control_aquiror_rep_name",
+                        "developer_changed_use_case_form",
+                        "changed_use_case_by_auditor",
+                        "assignee",
+                        "agent_ldap",
+                        "agent_team",
+                        "duplicate_of_ticket",
+                        "agent_audit_decision",
+                        "ticket_decision_reason",
+                        "need_agent_review",
+                        "reason_for_rejection",
+                        "YTRP_previous_approval",
+                        "YTRP_details_changed",
+                        "YTRP_organization_manual_entry",
+                        "YTRP_researcher_country",
+                        "YTRP_researcher_job_title",
+                        "YTRP_job_title_manual_entry",
+                        "YTRP_research_title",
+                        "YTRP_field_of_research",
+                        "YTRP_research_proposal",
+                        "YTRP_research_category",
+                        "YTRP_research_topic",
+                        "YTRP_research_subtopic",
+                        "YTRP_sponsored_entity_yes_no",
+                        "YTRP_sponsored_entity",
+                        "YTRP_sanctions_approval",
+                        "YTRP_government_approval",
+                        "YTRP_research_start_date",
+                        "YTRP_research_publication_date"
+                    ],
+                    "data": [
+                        [
+                            "T59-100441337",
+                            "327046885910",
+                            "327046885910, 801870353488",
+                            "Spotter, Inc.",
+                            "CLOSED",
+                            "quota",
+                            "TRUST",
+                            1685489238000000,
+                            1687977444492280.0,
+                            "Others",
+                            "MCNs",
+                            "bump_quota,decision_reviewed,granted,maintain_quota,reroute_inspect",
+                            "A.1 (Show YT ToS),A.2.c (Link Privacy Policy),A.2.h (User Info Deletion),E.4 a-g (Refreshing/storing data),E.4.h (Derived Metrics)",
+                            "Others",
+                            "801870353488 - 400,000 , 327046885910 - 180000",
+                            "Closed",
+                            "QuotaExceptionClosed",
+                            "Jonathan Bodenheimer",
+                            "https_//spotter.la/",
+                            "jon@spotter.la",
+                            "US",
+                            "weichiehchi@google.com",
+                            false,
+                            "2023-05-30 00:00:00",
+                            "2023-06-28 00:00:00",
+                            null,
+                            null,
+                            null,
+                            null,
+                            "No",
+                            null,
+                            "marlopaulo",
+                            "marlopaulo",
+                            "MNL",
+                            null,
+                            "pass",
+                            "Granted",
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null
+                        ],
+                        [
+                            "T59-100441337",
+                            "801870353488",
+                            "327046885910, 801870353488",
+                            "Spotter, Inc.",
+                            "CLOSED",
+                            "quota",
+                            "TRUST",
+                            1685489238000000,
+                            1687977444492280.0,
+                            "Others",
+                            "MCNs",
+                            "bump_quota,decision_reviewed,granted,maintain_quota,reroute_inspect",
+                            "A.1 (Show YT ToS),A.2.c (Link Privacy Policy),A.2.h (User Info Deletion),E.4 a-g (Refreshing/storing data),E.4.h (Derived Metrics)",
+                            "Others",
+                            "801870353488 - 400,000 , 327046885910 - 180000",
+                            "Closed",
+                            "QuotaExceptionClosed",
+                            "Jonathan Bodenheimer",
+                            "https_//spotter.la/",
+                            "jon@spotter.la",
+                            "US",
+                            "weichiehchi@google.com",
+                            false,
+                            "2023-05-30 00:00:00",
+                            "2023-06-28 00:00:00",
+                            null,
+                            null,
+                            null,
+                            null,
+                            "No",
+                            null,
+                            "marlopaulo",
+                            "marlopaulo",
+                            "MNL",
+                            null,
+                            "pass",
+                            "Granted",
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null
+                        ],
+                        [
+                            "T59-44531547",
+                            "1062282822254",
+                            "1062282822254",
+                            "Spotter, Inc. (formerly Network of One div or Roundup Media LLC)",
+                            "CLOSED",
+                            "audit",
+                            "TRUST",
+                            1582575910000000,
+                            1599721509979820.0,
+                            "Internal Use",
+                            "Data Research",
+                            "decision_reviewed,granted,maintain_quota,proactive_audit,reroute_inspect",
+                            "A.1 (Show YT ToS),A.2.c (Link Privacy Policy),A.2.h (User Info Deletion),D.1.c (Number of Project Ids)",
+                            "Multiple Keys",
+                            null,
+                            "Closed",
+                            "MaintainQuotaClosed",
+                            "David William Carroll",
+                            "https://www.spotter.la",
+                            "david.carroll@spotter.la",
+                            null,
+                            "sohampatel@google.com",
+                            false,
+                            "2020-02-24 00:00:00",
+                            "2020-09-10 00:00:00",
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            "pass",
+                            "Granted",
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "role": "user",
+            "content": "How many closed analytics tickets are there, that were audited, with no violations"
+        },
+        {
+            "role": "assistant",
+            "content": {
+                "sql_query": "SELECT\n  COUNT(*)\nFROM\n  ytflow_api_tickets\nWHERE\n  LOWER(ticket_status) = LOWER('CLOSED')\n  AND LOWER(ticket_classification) = LOWER('analytics')\n  AND violations IS NULL;",
+                "columns_used": [],
+                "feedback": "corrected",
+                "corrected_query": "SELECT COUNT(DISTINCT t.project_number) AS projects\nFROM ytflow_api_tickets AS t\nWHERE t.project_number <> '0' AND lower(t.business_classification) IN ('analytics') AND t.ticket_classification IN ('audit',  'audited_developer_request')\n  AND lower(t.ticket_status) = 'closed' \n  AND t.violations <> ''",
+                "corrected_columns": [],
+                "column_mapping": {},
+                "result": {
+                    "index": [
+                        0
+                    ],
+                    "columns": [
+                        "count_star()"
+                    ],
+                    "data": [
+                        [
+                            0
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "role": "user",
+            "content": "What is the total quota granted and the average quota used over the past 90 days for project_number 913410579868"
+        },
+        {
+            "role": "assistant",
+            "content": {
+                "sql_query": "SELECT\n  SUM(CAST(REPLACE(SUBSTR(additional_quota_requested, INSTR(additional_quota_requested, '- ') + 2), ',', '') AS BIGINT)) AS total_quota_granted,\n  AVG(CAST(REPLACE(SUBSTR(additional_quota_requested, INSTR(additional_quota_requested, '- ') + 2), ',', '') AS BIGINT)) AS average_quota_used\nFROM ytflow_api_tickets\nWHERE\n  project_number = '913410579868'\n  AND create_date >= CURRENT_DATE - INTERVAL '90 days'\nLIMIT 100;",
+                "columns_used": [],
+                "feedback": "corrected",
+                "corrected_query": "WITH quota AS (\n    SELECT \n        _PARTITION_DATE, \n        project_number, \n        MAX(total_quota) AS total_quota, \n        MAX(quota_success) AS quota_used\n    FROM external_aggregated_api_usage\n    WHERE project_number = 913410579868 \n      AND _PARTITION_DATE >= CURRENT_DATE - INTERVAL '90 days'\n    GROUP BY _PARTITION_DATE, project_number\n)\nSELECT \n    project_number, \n    MAX(total_quota) AS total_quota, \n    AVG(quota_used) AS avg_quota_used \nFROM quota\nGROUP BY project_number;\n",
+                "corrected_columns": [],
+                "column_mapping": {},
+                "result": {
+                    "index": [
+                        0
+                    ],
+                    "columns": [
+                        "total_quota_granted",
+                        "average_quota_used"
+                    ],
+                    "data": [
+                        [
+                            null,
+                            null
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "role": "user",
+            "content": "What is the total quota granted and the average quota used over the past 90 days for project_number 913410579868"
+        },
+        {
+            "role": "assistant",
+            "content": {
+                "sql_query": "WITH quota AS (\n    SELECT \n        _PARTITION_DATE, \n        project_number, \n        MAX(total_quota) AS total_quota, \n        MAX(quota_success) AS quota_used\n    FROM external_aggregated_api_usage\n    WHERE project_number = 913410579868 \n      AND _PARTITION_DATE >= CURRENT_DATE - INTERVAL '90 days'\n    GROUP BY _PARTITION_DATE, project_number\n)\nSELECT \n    project_number, \n    MAX(total_quota) AS total_quota, \n    AVG(quota_used) AS avg_quota_used \nFROM quota\nGROUP BY project_number;",
+                "error": "Table 'quota' not found in schema. Available tables are: external_aggregated_api_usage, ytflow_api_tickets",
+                "columns_used": [],
+                "feedback": "incorrect",
+                "corrected_query": null,
+                "corrected_columns": null,
+                "column_mapping": {}
+            }
+        },
+        {
+            "role": "user",
+            "content": "What is the total quota granted and the average quota used over the past 90 days for project_number 913410579868"
+        },
+        {
+            "role": "assistant",
+            "content": {
+                "sql_query": "SELECT\n  SUM(CAST(REPLACE(SUBSTR(additional_quota_requested, INSTR(additional_quota_requested, '- ') + 2), ',', '') AS BIGINT)) AS total_quota_granted,\n  AVG(CAST(REPLACE(SUBSTR(additional_quota_requested, INSTR(additional_quota_requested, '- ') + 2), ',', '') AS BIGINT)) AS average_quota_used\nFROM ytflow_api_tickets\nWHERE\n  project_number = '913410579868'\n  AND create_date >= CURRENT_DATE - INTERVAL '90 days'\nLIMIT 100;",
+                "columns_used": [],
+                "feedback": "corrected",
+                "column_mapping": {},
+                "result": {
+                    "index": [
+                        0
+                    ],
+                    "columns": [
+                        "total_quota_granted",
+                        "average_quota_used"
+                    ],
+                    "data": [
+                        [
+                            null,
+                            null
+                        ]
+                    ]
+                },
+                "corrected_query": "WITH quota AS (\n    SELECT \n        _PARTITION_DATE, \n        project_number, \n        MAX(total_quota) AS total_quota, \n        MAX(quota_success) AS quota_used\n    FROM external_aggregated_api_usage\n    WHERE project_number = 913410579868 \n      AND _PARTITION_DATE >= CURRENT_DATE - INTERVAL '90 days'\n    GROUP BY _PARTITION_DATE, project_number\n)\nSELECT \n    project_number, \n    MAX(total_quota) AS total_quota, \n    AVG(quota_used) AS avg_quota_used \nFROM quota\nGROUP BY project_number;\n",
+                "corrected_columns": []
+            }
+        },
+        {
+            "role": "user",
+            "content": "What is the total quota granted and the average quota used over the past 90 days for project_number 913410579868"
+        },
+        {
+            "role": "assistant",
+            "content": {
+                "sql_query": "SELECT\n  SUM(CAST(REPLACE(SUBSTR(additional_quota_requested, INSTR(additional_quota_requested, '- ') + 2), ',', '') AS BIGINT)) AS total_quota_granted,\n  AVG(CAST(REPLACE(SUBSTR(additional_quota_requested, INSTR(additional_quota_requested, '- ') + 2), ',', '') AS BIGINT)) AS average_quota_used\nFROM ytflow_api_tickets\nWHERE\n  project_number = '913410579868'\n  AND create_date >= CURRENT_DATE - INTERVAL '90 days'\nLIMIT 100;",
+                "columns_used": [],
+                "feedback": null,
+                "corrected_query": null,
+                "corrected_columns": null,
+                "column_mapping": {},
+                "result": {
+                    "index": [
+                        0
+                    ],
+                    "columns": [
+                        "total_quota_granted",
+                        "average_quota_used"
+                    ],
+                    "data": [
+                        [
+                            null,
+                            null
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "role": "user",
+            "content": " What is the total quota granted and the average quota used over the past 90 days for project_number 913410579868"
+        },
+        {
+            "role": "assistant",
+            "content": {
+                "sql_query": "WITH quota AS (\n    SELECT \n        _PARTITION_DATE, \n        project_number, \n        MAX(total_quota) AS total_quota, \n        MAX(quota_success) AS quota_used\n    FROM external_aggregated_api_usage\n    WHERE project_number = 913410579868 \n      AND _PARTITION_DATE >= CURRENT_DATE - INTERVAL '90 days'\n    GROUP BY _PARTITION_DATE, project_number\n)\nSELECT \n    project_number, \n    MAX(total_quota) AS total_quota, \n    AVG(quota_used) AS avg_quota_used \nFROM quota\nGROUP BY project_number;",
+                "error": "Table 'quota' not found in schema. Available tables are: external_aggregated_api_usage, ytflow_api_tickets",
+                "columns_used": [],
+                "feedback": "incorrect",
+                "corrected_query": null,
+                "corrected_columns": null,
+                "column_mapping": {}
+            }
+        },
+        {
+            "role": "user",
+            "content": "What is the total quota granted and the average quota used over the past 90 days for project_number 913410579868"
+        },
+        {
+            "role": "assistant",
+            "content": {
+                "sql_query": "SELECT\n  SUM(CAST(REPLACE(SUBSTR(additional_quota_requested, INSTR(additional_quota_requested, '- ') + 2), ',', '') AS BIGINT)) AS total_quota_granted,\n  AVG(CAST(REPLACE(SUBSTR(additional_quota_requested, INSTR(additional_quota_requested, '- ') + 2), ',', '') AS BIGINT)) AS average_quota_used\nFROM ytflow_api_tickets\nWHERE\n  project_number = '913410579868'\n  AND create_date >= CURRENT_DATE - INTERVAL '90 days'\nLIMIT 100;",
+                "columns_used": [],
+                "feedback": null,
+                "corrected_query": null,
+                "corrected_columns": null,
+                "column_mapping": {},
+                "result": {
+                    "index": [
+                        0
+                    ],
+                    "columns": [
+                        "total_quota_granted",
+                        "average_quota_used"
+                    ],
+                    "data": [
+                        [
+                            null,
+                            null
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "role": "user",
+            "content": "What is the total quota granted and the average quota used over the past 90 days for project_number 913410579868"
+        },
+        {
+            "role": "assistant",
+            "content": {
+                "sql_query": "SELECT\n  SUM(CAST(REPLACE(SUBSTR(additional_quota_requested, INSTR(additional_quota_requested, '- ') + 2), ',', '') AS BIGINT)) AS total_quota_granted,\n  AVG(CAST(REPLACE(SUBSTR(additional_quota_requested, INSTR(additional_quota_requested, '- ') + 2), ',', '') AS BIGINT)) AS average_quota_used\nFROM ytflow_api_tickets\nWHERE\n  project_number = '913410579868'\n  AND create_date >= CURRENT_DATE - INTERVAL '90 days'\nLIMIT 100;",
+                "error": "Error validating query: 'callable_iterator' object has no attribute 'group'",
+                "columns_used": [],
+                "feedback": "incorrect",
+                "corrected_query": null,
+                "corrected_columns": null,
+                "column_mapping": {}
+            }
+        },
+        {
+            "role": "user",
+            "content": "What is the total quota granted and the average quota used over the past 90 days for project_number 913410579868"
+        },
+        {
+            "role": "assistant",
+            "content": {
+                "sql_query": "SELECT\n  SUM(CAST(REPLACE(SUBSTR(additional_quota_requested, INSTR(additional_quota_requested, '- ') + 2), ',', '') AS BIGINT)) AS total_quota_granted,\n  AVG(CAST(REPLACE(SUBSTR(additional_quota_requested, INSTR(additional_quota_requested, '- ') + 2), ',', '') AS BIGINT)) AS average_quota_used\nFROM ytflow_api_tickets\nWHERE\n  project_number = '913410579868'\n  AND create_date >= CURRENT_DATE - INTERVAL '90 days'\nLIMIT 100;",
+                "columns_used": [],
+                "feedback": "corrected",
+                "corrected_query": "WITH quota AS (\n    SELECT \n        _PARTITION_DATE, \n        project_number, \n        MAX(total_quota) AS total_quota, \n        MAX(quota_success) AS quota_used\n    FROM external_aggregated_api_usage\n    WHERE project_number = 913410579868 \n      AND _PARTITION_DATE >= CURRENT_DATE - INTERVAL '90 days'\n    GROUP BY _PARTITION_DATE, project_number\n)\nSELECT \n    project_number, \n    MAX(total_quota) AS total_quota, \n    AVG(quota_used) AS avg_quota_used \nFROM quota\nGROUP BY project_number;\n",
+                "corrected_columns": [],
+                "column_mapping": {},
+                "result": {
+                    "index": [
+                        0
+                    ],
+                    "columns": [
+                        "total_quota_granted",
+                        "average_quota_used"
+                    ],
+                    "data": [
+                        [
+                            null,
+                            null
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "role": "user",
+            "content": " What is the total quota granted and the average quota used over the past 90 days for project_number 913410579868"
+        },
+        {
+            "role": "assistant",
+            "content": {
+                "sql_query": "WITH quota AS (\n    SELECT \n        _PARTITION_DATE, \n        project_number, \n        MAX(total_quota) AS total_quota, \n        MAX(quota_success) AS quota_used\n    FROM external_aggregated_api_usage\n    WHERE project_number = 913410579868 \n      AND _PARTITION_DATE >= CURRENT_DATE - INTERVAL '90 days'\n    GROUP BY _PARTITION_DATE, project_number\n)\nSELECT \n    project_number, \n    MAX(total_quota) AS total_quota, \n    AVG(quota_used) AS avg_quota_used \nFROM quota\nGROUP BY project_number;",
+                "columns_used": [
+                    "project_number"
+                ],
+                "feedback": "correct",
+                "column_mapping": {
+                    "project_number": 2
+                },
+                "result": {
+                    "index": [],
+                    "columns": [
+                        "project_number",
+                        "total_quota",
+                        "avg_quota_used"
+                    ],
+                    "data": []
+                }
+            }
+        },
+        {
+            "role": "user",
+            "content": "How many closed analytics tickets are there, that were audited, with no violations"
+        },
+        {
+            "role": "assistant",
+            "content": {
+                "sql_query": "SELECT\n  COUNT(CASE WHEN ticket_status = 'CLOSED' AND ticket_classification = 'analytics' AND audit_completed = TRUE AND violations IS NULL THEN 1 END)\nFROM\n  external_aggregated_api_usage\nLIMIT 100;",
+                "result": "An error occurred during query execution: (duckdb.duckdb.BinderException) Binder Error: Referenced column \"ticket_status\" not found in FROM clause!\nCandidate bindings: \"compliance_status\", \"hits_success\", \"total_quota\", \"api_use_case\", \"quota_success\"\n\nLINE 2:   COUNT(CASE WHEN ticket_status = 'CLOSED' AND ticket_classification = 'analy...\n                          ^\n[SQL: SELECT\n  COUNT(CASE WHEN ticket_status = 'CLOSED' AND ticket_classification = 'analytics' AND audit_completed = TRUE AND violations IS NULL THEN 1 END)\nFROM\n  external_aggregated_api_usage\nLIMIT 100;]\n(Background on this error at: https://sqlalche.me/e/20/f405)\n\nTraceback:\nTraceback (most recent call last):\n  File \"D:\\vscode\\GeminiSQL-main\\app\\.venv\\lib\\site-packages\\sqlalchemy\\engine\\base.py\", line 1963, in _exec_single_context\n    self.dialect.do_execute(\n  File \"D:\\vscode\\GeminiSQL-main\\app\\.venv\\lib\\site-packages\\sqlalchemy\\engine\\default.py\", line 943, in do_execute\n    cursor.execute(statement, parameters)\n  File \"D:\\vscode\\GeminiSQL-main\\app\\.venv\\lib\\site-packages\\duckdb_engine\\__init__.py\", line 150, in execute\n    self.__c.execute(statement, parameters)\nduckdb.duckdb.BinderException: Binder Error: Referenced column \"ticket_status\" not found in FROM clause!\nCandidate bindings: \"compliance_status\", \"hits_success\", \"total_quota\", \"api_use_case\", \"quota_success\"\n\nLINE 2:   COUNT(CASE WHEN ticket_status = 'CLOSED' AND ticket_classification = 'analy...\n                          ^\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"D:\\vscode\\GeminiSQL-main\\app\\main.py\", line 198, in <module>\n    result_df = pd.read_sql(sql_query, conn)\n  File \"D:\\vscode\\GeminiSQL-main\\app\\.venv\\lib\\site-packages\\pandas\\io\\sql.py\", line 736, in read_sql\n    return pandas_sql.read_query(\n  File \"D:\\vscode\\GeminiSQL-main\\app\\.venv\\lib\\site-packages\\pandas\\io\\sql.py\", line 1848, in read_query\n    result = self.execute(sql, params)\n  File \"D:\\vscode\\GeminiSQL-main\\app\\.venv\\lib\\site-packages\\pandas\\io\\sql.py\", line 1671, in execute\n    return self.con.exec_driver_sql(sql, *args)\n  File \"D:\\vscode\\GeminiSQL-main\\app\\.venv\\lib\\site-packages\\sqlalchemy\\engine\\base.py\", line 1775, in exec_driver_sql\n    ret = self._execute_context(\n  File \"D:\\vscode\\GeminiSQL-main\\app\\.venv\\lib\\site-packages\\sqlalchemy\\engine\\base.py\", line 1842, in _execute_context\n    return self._exec_single_context(\n  File \"D:\\vscode\\GeminiSQL-main\\app\\.venv\\lib\\site-packages\\sqlalchemy\\engine\\base.py\", line 1982, in _exec_single_context\n    self._handle_dbapi_exception(\n  File \"D:\\vscode\\GeminiSQL-main\\app\\.venv\\lib\\site-packages\\sqlalchemy\\engine\\base.py\", line 2351, in _handle_dbapi_exception\n    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e\n  File \"D:\\vscode\\GeminiSQL-main\\app\\.venv\\lib\\site-packages\\sqlalchemy\\engine\\base.py\", line 1963, in _exec_single_context\n    self.dialect.do_execute(\n  File \"D:\\vscode\\GeminiSQL-main\\app\\.venv\\lib\\site-packages\\sqlalchemy\\engine\\default.py\", line 943, in do_execute\n    cursor.execute(statement, parameters)\n  File \"D:\\vscode\\GeminiSQL-main\\app\\.venv\\lib\\site-packages\\duckdb_engine\\__init__.py\", line 150, in execute\n    self.__c.execute(statement, parameters)\nsqlalchemy.exc.ProgrammingError: (duckdb.duckdb.BinderException) Binder Error: Referenced column \"ticket_status\" not found in FROM clause!\nCandidate bindings: \"compliance_status\", \"hits_success\", \"total_quota\", \"api_use_case\", \"quota_success\"\n\nLINE 2:   COUNT(CASE WHEN ticket_status = 'CLOSED' AND ticket_classification = 'analy...\n                          ^\n[SQL: SELECT\n  COUNT(CASE WHEN ticket_status = 'CLOSED' AND ticket_classification = 'analytics' AND audit_completed = TRUE AND violations IS NULL THEN 1 END)\nFROM\n  external_aggregated_api_usage\nLIMIT 100;]\n(Background on this error at: https://sqlalche.me/e/20/f405)\n",
+                "columns_used": [],
+                "feedback": "incorrect",
+                "corrected_query": null,
+                "corrected_columns": null,
+                "column_mapping": {}
+            }
+        },
+        {
+            "role": "user",
+            "content": "Give me the valid quota ticket details of the company ViewStats"
+        },
+        {
+            "role": "assistant",
+            "content": {
+                "sql_query": "SELECT\n  *\nFROM\n  ytflow_api_tickets\nWHERE\n  LOWER(developer_organization_name) = 'viewstats'\n  AND ticket_classification = 'quota'\nLIMIT 100;",
+                "columns_used": [],
+                "feedback": null,
+                "corrected_query": null,
+                "corrected_columns": null,
+                "column_mapping": {},
+                "result": {
+                    "index": [],
+                    "columns": [
+                        "ticket_id",
+                        "project_number",
+                        "multiple_project_list",
+                        "developer_organization_name",
+                        "ticket_status",
+                        "ticket_classification",
+                        "ticket_compliance_status",
+                        "create_time",
+                        "resolve_time",
+                        "business_classification",
+                        "business_use_case",
+                        "labels",
+                        "violations",
+                        "investigate_reason",
+                        "additional_quota_requested",
+                        "ticket_progress_stage",
+                        "state",
+                        "developer_name",
+                        "developer_website",
+                        "developer_email_address",
+                        "country_code",
+                        "google_representative",
+                        "is_partner",
+                        "create_date",
+                        "resolve_date",
+                        "public_private_api",
+                        "derived_metrics",
+                        "change_control_date",
+                        "change_control_aquiror_rep_name",
+                        "developer_changed_use_case_form",
+                        "changed_use_case_by_auditor",
+                        "assignee",
+                        "agent_ldap",
+                        "agent_team",
+                        "duplicate_of_ticket",
+                        "agent_audit_decision",
+                        "ticket_decision_reason",
+                        "need_agent_review",
+                        "reason_for_rejection",
+                        "YTRP_previous_approval",
+                        "YTRP_details_changed",
+                        "YTRP_organization_manual_entry",
+                        "YTRP_researcher_country",
+                        "YTRP_researcher_job_title",
+                        "YTRP_job_title_manual_entry",
+                        "YTRP_research_title",
+                        "YTRP_field_of_research",
+                        "YTRP_research_proposal",
+                        "YTRP_research_category",
+                        "YTRP_research_topic",
+                        "YTRP_research_subtopic",
+                        "YTRP_sponsored_entity_yes_no",
+                        "YTRP_sponsored_entity",
+                        "YTRP_sanctions_approval",
+                        "YTRP_government_approval",
+                        "YTRP_research_start_date",
+                        "YTRP_research_publication_date"
+                    ],
+                    "data": []
+                }
+            }
+        },
+        {
+            "role": "user",
+            "content": "How many closed analytics tickets are there, that were audited, with no violationsr"
+        },
+        {
+            "role": "assistant",
+            "content": {
+                "sql_query": "SELECT\n  COUNT(CASE WHEN ticket_status = 'CLOSED' AND ticket_classification = 'analytics' AND violations IS NULL THEN 1 END)\nFROM\n  ytflow_api_tickets\nLIMIT 100;",
+                "columns_used": [],
+                "feedback": "corrected",
+                "corrected_query": "\nSELECT COUNT(DISTINCT t.project_number) AS projects\nFROM ytflow_api_tickets AS t\nWHERE t.project_number <> '0' AND t.business_classification IN ('Analytics') AND t.ticket_classification IN ('audit',  'audited_developer_request')\n  AND t.ticket_status = 'CLOSED' \n  AND t.violations <> ''\n",
+                "corrected_columns": [],
+                "column_mapping": {},
+                "result": {
+                    "index": [
+                        0
+                    ],
+                    "columns": [
+                        "count(CASE  WHEN (((ticket_status = 'CLOSED') AND (ticket_classification = 'analytics') AND (violations IS NULL))) THEN (1) ELSE NULL END)"
+                    ],
+                    "data": [
+                        [
+                            0
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "role": "user",
+            "content": "How many closed analytics tickets are there, that were audited, with no violations"
+        },
+        {
+            "role": "assistant",
+            "content": {
+                "sql_query": "SELECT COUNT(DISTINCT t.project_number) AS projects\nFROM ytflow_api_tickets AS t\nWHERE t.project_number <> '0' AND t.business_classification IN ('Analytics') AND t.ticket_classification IN ('audit',  'audited_developer_request')\n  AND t.ticket_status = 'CLOSED' \n  AND t.violations <> ''",
+                "columns_used": [],
+                "feedback": null,
+                "corrected_query": null,
+                "corrected_columns": null,
+                "column_mapping": {},
+                "result": {
+                    "index": [
+                        0
+                    ],
+                    "columns": [
+                        "projects"
+                    ],
+                    "data": [
+                        [
+                            104
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "role": "user",
+            "content": "For project_number '775513731180', tell me the average quota used over the last 90 days and the quota allocated"
+        },
+        {
+            "role": "assistant",
+            "content": {
+                "sql_query": "SELECT\n  AVG(CAST(REPLACE(SUBSTR(additional_quota_requested, INSTR(additional_quota_requested, '- ') + 2), ',', '') AS BIGINT)) AS avg_quota_requested,\n  project_number\nFROM\n  ytflow_api_tickets\nWHERE\n  project_number = '775513731180'\n  AND create_date >= CURRENT_DATE - INTERVAL '90 days'\nGROUP BY\n  project_number\nLIMIT 100;",
+                "columns_used": [
+                    "project_number"
+                ],
+                "feedback": null,
+                "corrected_query": null,
+                "corrected_columns": null,
+                "column_mapping": {
+                    "project_number": 1
+                },
+                "result": {
+                    "index": [],
+                    "columns": [
+                        "avg_quota_requested",
+                        "project_number"
+                    ],
+                    "data": []
+                }
+            }
+        },
+        {
+            "role": "user",
+            "content": "For project_number \\775513731180, tell me the average quota used over the last 90 days and the quota allocated"
+        },
+        {
+            "role": "assistant",
+            "content": {
+                "sql_query": "SELECT\n  AVG(CAST(REPLACE(SUBSTR(additional_quota_requested, INSTR(additional_quota_requested, '- ') + 2), ',', '') AS BIGINT)) AS avg_quota_requested,\n  project_number\nFROM\n  ytflow_api_tickets\nWHERE\n  project_number = '775513731180'\n  AND create_date >= CURRENT_DATE - INTERVAL '90 days'\nGROUP BY\n  project_number\nLIMIT 100;",
+                "columns_used": [
+                    "project_number"
+                ],
+                "feedback": "corrected",
+                "corrected_query": "WITH _0 AS (\n  SELECT\n    t._PARTITION_DATE,\n    t.project_number,\n    t.quota_allocated,\n    SUM(t.quota_success) AS quota_used\n  FROM yt_contentorg_api_compliance.external_aggregated_api_usage.last90days AS t\n  WHERE t.project_number  = 775513731180\n  GROUP BY 1, 2, 3\n  ORDER BY 1 DESC\n)\nSELECT \n  AVG(quota_used) AS avg_quota_used, \n  MAX(quota_allocated) AS quota_allocated\nFROM _0;\n",
+                "corrected_columns": [],
+                "column_mapping": {
+                    "project_number": -2
+                },
+                "result": {
+                    "index": [],
+                    "columns": [
+                        "avg_quota_requested",
+                        "project_number"
+                    ],
+                    "data": []
+                }
+            }
+        },
+        {
+            "role": "user",
+            "content": "For project_number 775513731180, tell me the average quota used over the last 90 days and the quota allocated"
+        },
+        {
+            "role": "assistant",
+            "content": {
+                "sql_query": "WITH _0 AS (\n  SELECT\n    t._PARTITION_DATE,\n    t.project_number,\n    t.quota_allocated,\n    SUM(t.quota_success) AS quota_used\n  FROM external_aggregated_api_usage AS t\n  WHERE t.project_number  = 775513731180\n   AND t._PARTITION_DATE >= CURRENT_DATE - INTERVAL '90 days'\n  GROUP BY 1, 2, 3\n  ORDER BY 1 DESC\n)\nSELECT \n  AVG(quota_used) AS avg_quota_used, \n  MAX(quota_allocated) AS quota_allocated\nFROM _0;",
+                "columns_used": [],
+                "feedback": "correct",
+                "column_mapping": {},
+                "result": {
+                    "index": [
+                        0
+                    ],
+                    "columns": [
+                        "avg_quota_used",
+                        "quota_allocated"
+                    ],
+                    "data": [
+                        [
+                            111513683.38271604,
+                            244000000
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "role": "user",
+            "content": "Show me all closed and granted quota ticket details for companies 'Spotter' and 'VidIQ'"
+        },
+        {
+            "role": "assistant",
+            "content": {
+                "sql_query": "SELECT\n  *\nFROM\n  ytflow_api_tickets\nWHERE\n  LOWER(developer_organization_name) IN ('spotter, inc.', 'vidiq, inc')\n  AND LOWER(ticket_status) = 'closed'\n  AND LOWER(agent_audit_decision) = 'granted'\n  AND LOWER(ticket_classification) = 'quota'\nLIMIT 100",
+                "columns_used": [],
+                "feedback": null,
+                "corrected_query": null,
+                "corrected_columns": null,
+                "column_mapping": {},
+                "result": {
+                    "index": [],
+                    "columns": [
+                        "ticket_id",
+                        "project_number",
+                        "multiple_project_list",
+                        "developer_organization_name",
+                        "ticket_status",
+                        "ticket_classification",
+                        "ticket_compliance_status",
+                        "create_time",
+                        "resolve_time",
+                        "business_classification",
+                        "business_use_case",
+                        "labels",
+                        "violations",
+                        "investigate_reason",
+                        "additional_quota_requested",
+                        "ticket_progress_stage",
+                        "state",
+                        "developer_name",
+                        "developer_website",
+                        "developer_email_address",
+                        "country_code",
+                        "google_representative",
+                        "is_partner",
+                        "create_date",
+                        "resolve_date",
+                        "public_private_api",
+                        "derived_metrics",
+                        "change_control_date",
+                        "change_control_aquiror_rep_name",
+                        "developer_changed_use_case_form",
+                        "changed_use_case_by_auditor",
+                        "assignee",
+                        "agent_ldap",
+                        "agent_team",
+                        "duplicate_of_ticket",
+                        "agent_audit_decision",
+                        "ticket_decision_reason",
+                        "need_agent_review",
+                        "reason_for_rejection",
+                        "YTRP_previous_approval",
+                        "YTRP_details_changed",
+                        "YTRP_organization_manual_entry",
+                        "YTRP_researcher_country",
+                        "YTRP_researcher_job_title",
+                        "YTRP_job_title_manual_entry",
+                        "YTRP_research_title",
+                        "YTRP_field_of_research",
+                        "YTRP_research_proposal",
+                        "YTRP_research_category",
+                        "YTRP_research_topic",
+                        "YTRP_research_subtopic",
+                        "YTRP_sponsored_entity_yes_no",
+                        "YTRP_sponsored_entity",
+                        "YTRP_sanctions_approval",
+                        "YTRP_government_approval",
+                        "YTRP_research_start_date",
+                        "YTRP_research_publication_date"
+                    ],
+                    "data": []
+                }
+            }
+        },
+        {
+            "role": "user",
+            "content": " Show me all closed and granted quota ticket details for companies 'Spotter' and 'VidIQ"
+        },
+        {
+            "role": "assistant",
+            "content": {
+                "sql_query": "SELECT\n  *\nFROM\n  ytflow_api_tickets\nWHERE\n  LOWER(developer_organization_name) IN ('spotter, inc', 'vidiq, inc')\n  AND LOWER(ticket_status) = 'closed'\n  AND LOWER(agent_audit_decision) = 'granted'\n  AND LOWER(ticket_classification) = 'quota'\nLIMIT 100",
+                "columns_used": [],
+                "feedback": "corrected",
+                "corrected_query": "SELECT *\nFROM ytflow_api_tickets AS t\nWHERE (lower(t.developer_organization_name) LIKE '%spotter%' OR lower(t.developer_organization_name) LIKE '%vidiq%') \nAND lower(ticket_status) = 'closed' AND ticket_classification = 'quota' ANd lower(ticket_decision_reason) = 'granted'",
+                "corrected_columns": [],
+                "column_mapping": {},
+                "result": {
+                    "index": [],
+                    "columns": [
+                        "ticket_id",
+                        "project_number",
+                        "multiple_project_list",
+                        "developer_organization_name",
+                        "ticket_status",
+                        "ticket_classification",
+                        "ticket_compliance_status",
+                        "create_time",
+                        "resolve_time",
+                        "business_classification",
+                        "business_use_case",
+                        "labels",
+                        "violations",
+                        "investigate_reason",
+                        "additional_quota_requested",
+                        "ticket_progress_stage",
+                        "state",
+                        "developer_name",
+                        "developer_website",
+                        "developer_email_address",
+                        "country_code",
+                        "google_representative",
+                        "is_partner",
+                        "create_date",
+                        "resolve_date",
+                        "public_private_api",
+                        "derived_metrics",
+                        "change_control_date",
+                        "change_control_aquiror_rep_name",
+                        "developer_changed_use_case_form",
+                        "changed_use_case_by_auditor",
+                        "assignee",
+                        "agent_ldap",
+                        "agent_team",
+                        "duplicate_of_ticket",
+                        "agent_audit_decision",
+                        "ticket_decision_reason",
+                        "need_agent_review",
+                        "reason_for_rejection",
+                        "YTRP_previous_approval",
+                        "YTRP_details_changed",
+                        "YTRP_organization_manual_entry",
+                        "YTRP_researcher_country",
+                        "YTRP_researcher_job_title",
+                        "YTRP_job_title_manual_entry",
+                        "YTRP_research_title",
+                        "YTRP_field_of_research",
+                        "YTRP_research_proposal",
+                        "YTRP_research_category",
+                        "YTRP_research_topic",
+                        "YTRP_research_subtopic",
+                        "YTRP_sponsored_entity_yes_no",
+                        "YTRP_sponsored_entity",
+                        "YTRP_sanctions_approval",
+                        "YTRP_government_approval",
+                        "YTRP_research_start_date",
+                        "YTRP_research_publication_date"
+                    ],
+                    "data": []
+                }
+            }
+        },
+        {
+            "role": "user",
+            "content": "Show me all closed and granted quota ticket details for companies 'Spotter' and 'VidIQ'"
+        },
+        {
+            "role": "assistant",
+            "content": {
+                "sql_query": "SELECT *\nFROM ytflow_api_tickets AS t\nWHERE (lower(t.developer_organization_name) LIKE '%spotter%' OR lower(t.developer_organization_name) LIKE '%vidiq%') \nAND lower(ticket_status) = 'closed' AND ticket_classification = 'quota' ANd lower(ticket_decision_reason) = 'granted'\nLIMIT 100",
+                "columns_used": [],
+                "feedback": "correct",
+                "column_mapping": {},
+                "result": {
+                    "index": [
+                        0,
+                        1,
+                        2
+                    ],
+                    "columns": [
+                        "ticket_id",
+                        "project_number",
+                        "multiple_project_list",
+                        "developer_organization_name",
+                        "ticket_status",
+                        "ticket_classification",
+                        "ticket_compliance_status",
+                        "create_time",
+                        "resolve_time",
+                        "business_classification",
+                        "business_use_case",
+                        "labels",
+                        "violations",
+                        "investigate_reason",
+                        "additional_quota_requested",
+                        "ticket_progress_stage",
+                        "state",
+                        "developer_name",
+                        "developer_website",
+                        "developer_email_address",
+                        "country_code",
+                        "google_representative",
+                        "is_partner",
+                        "create_date",
+                        "resolve_date",
+                        "public_private_api",
+                        "derived_metrics",
+                        "change_control_date",
+                        "change_control_aquiror_rep_name",
+                        "developer_changed_use_case_form",
+                        "changed_use_case_by_auditor",
+                        "assignee",
+                        "agent_ldap",
+                        "agent_team",
+                        "duplicate_of_ticket",
+                        "agent_audit_decision",
+                        "ticket_decision_reason",
+                        "need_agent_review",
+                        "reason_for_rejection",
+                        "YTRP_previous_approval",
+                        "YTRP_details_changed",
+                        "YTRP_organization_manual_entry",
+                        "YTRP_researcher_country",
+                        "YTRP_researcher_job_title",
+                        "YTRP_job_title_manual_entry",
+                        "YTRP_research_title",
+                        "YTRP_field_of_research",
+                        "YTRP_research_proposal",
+                        "YTRP_research_category",
+                        "YTRP_research_topic",
+                        "YTRP_research_subtopic",
+                        "YTRP_sponsored_entity_yes_no",
+                        "YTRP_sponsored_entity",
+                        "YTRP_sanctions_approval",
+                        "YTRP_government_approval",
+                        "YTRP_research_start_date",
+                        "YTRP_research_publication_date"
+                    ],
+                    "data": [
+                        [
+                            "T59-100441337",
+                            "327046885910",
+                            "327046885910, 801870353488",
+                            "Spotter, Inc.",
+                            "CLOSED",
+                            "quota",
+                            "TRUST",
+                            1685489238000000,
+                            1687977444492280.0,
+                            "Others",
+                            "MCNs",
+                            "bump_quota,decision_reviewed,granted,maintain_quota,reroute_inspect",
+                            "A.1 (Show YT ToS),A.2.c (Link Privacy Policy),A.2.h (User Info Deletion),E.4 a-g (Refreshing/storing data),E.4.h (Derived Metrics)",
+                            "Others",
+                            "801870353488 - 400,000 , 327046885910 - 180000",
+                            "Closed",
+                            "QuotaExceptionClosed",
+                            "Jonathan Bodenheimer",
+                            "https_//spotter.la/",
+                            "jon@spotter.la",
+                            "US",
+                            "weichiehchi@google.com",
+                            false,
+                            "2023-05-30 00:00:00",
+                            "2023-06-28 00:00:00",
+                            null,
+                            null,
+                            null,
+                            null,
+                            "No",
+                            null,
+                            "marlopaulo",
+                            "marlopaulo",
+                            "MNL",
+                            null,
+                            "pass",
+                            "Granted",
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null
+                        ],
+                        [
+                            "T59-100441337",
+                            "801870353488",
+                            "327046885910, 801870353488",
+                            "Spotter, Inc.",
+                            "CLOSED",
+                            "quota",
+                            "TRUST",
+                            1685489238000000,
+                            1687977444492280.0,
+                            "Others",
+                            "MCNs",
+                            "bump_quota,decision_reviewed,granted,maintain_quota,reroute_inspect",
+                            "A.1 (Show YT ToS),A.2.c (Link Privacy Policy),A.2.h (User Info Deletion),E.4 a-g (Refreshing/storing data),E.4.h (Derived Metrics)",
+                            "Others",
+                            "801870353488 - 400,000 , 327046885910 - 180000",
+                            "Closed",
+                            "QuotaExceptionClosed",
+                            "Jonathan Bodenheimer",
+                            "https_//spotter.la/",
+                            "jon@spotter.la",
+                            "US",
+                            "weichiehchi@google.com",
+                            false,
+                            "2023-05-30 00:00:00",
+                            "2023-06-28 00:00:00",
+                            null,
+                            null,
+                            null,
+                            null,
+                            "No",
+                            null,
+                            "marlopaulo",
+                            "marlopaulo",
+                            "MNL",
+                            null,
+                            "pass",
+                            "Granted",
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null
+                        ],
+                        [
+                            "T59-95436341",
+                            "928183395842",
+                            "928183395842",
+                            "vidIQ, Inc",
+                            "CLOSED",
+                            "quota",
+                            "TRUST",
+                            1676489585000000,
+                            1679437846229750.0,
+                            "Analytics",
+                            "Benchmarking",
+                            "bump_quota,decision_reviewed,granted,maintain_quota,reroute_inspect",
+                            "A.2.h (User Info Deletion),C.1 (Adhere to RMF Guidelines),D.2.c.i ii (Oauth Consent Revocation),E.3.a-f (Authorized data usage),E.4 a-g (Refreshing/storing data),E.4.h (Derived Metrics),F.2 (Branding)",
+                            "Others",
+                            "205000000",
+                            "Closed",
+                            "GrantClosed",
+                            "Cenell D. Harrell",
+                            "https_//www.vidiq.com",
+                            "cenell@vid.io",
+                            "US",
+                            "andresbejar@google.com",
+                            false,
+                            "2023-02-15 00:00:00",
+                            "2023-03-21 00:00:00",
+                            null,
+                            null,
+                            null,
+                            null,
+                            "No",
+                            null,
+                            "marlopaulo",
+                            "marlopaulo",
+                            "MNL",
+                            null,
+                            "pass",
+                            "Granted",
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "role": "user",
+            "content": "How many tickets created in 2024 had a Derived Metrics violation in 2024"
+        },
+        {
+            "role": "assistant",
+            "content": {
+                "sql_query": "SELECT\n  COUNT(*)\nFROM\n  ytflow_api_tickets\nWHERE\n  EXTRACT(YEAR FROM create_date) = 2024\n  AND derived_metrics IS NOT NULL\nLIMIT 100",
+                "error": "Table 'create_date' not found in schema. Available tables are: external_aggregated_api_usage, ytflow_api_tickets",
+                "columns_used": [],
+                "feedback": "incorrect",
+                "corrected_query": null,
+                "corrected_columns": null,
+                "column_mapping": {}
+            }
+        },
+        {
+            "role": "user",
+            "content": "How many tickets created in 2024 had a Derived Metrics violation in 2024"
+        },
+        {
+            "role": "assistant",
+            "content": {
+                "sql_query": "SELECT\n  COUNT(*)\nFROM\n  ytflow_api_tickets\nWHERE\n  EXTRACT(YEAR FROM create_date) = 2024\n  AND derived_metrics IS NOT NULL\nLIMIT 100",
+                "error": "Table 'create_date' not found in schema. Available tables are: external_aggregated_api_usage, ytflow_api_tickets",
+                "columns_used": [],
+                "feedback": "incorrect",
+                "corrected_query": null,
+                "corrected_columns": null,
+                "column_mapping": {}
+            }
+        },
+        {
+            "role": "user",
+            "content": "How many tickets created in 2024 had a Derived Metrics violation in 2024"
+        },
+        {
+            "role": "assistant",
+            "content": {
+                "error": "An error occurred during agent execution: 1 validation error for SQLDatabaseToolkit\nllm\n  Field required [type=missing, input_value={'db': <langchain_communi... at 0x000001DF96C4BDF0>}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.11/v/missing\n\nTraceback:\nTraceback (most recent call last):\n  File \"D:\\vscode\\GeminiSQL-main\\app\\main.py\", line 146, in <module>\n    agent = create_sql_agent(\n  File \"D:\\vscode\\GeminiSQL-main\\app\\utils\\agent_utils.py\", line 27, in create_sql_agent\n    toolkit = SQLDatabaseToolkit(db=db)\n  File \"D:\\vscode\\GeminiSQL-main\\app\\.venv\\lib\\site-packages\\pydantic\\main.py\", line 253, in __init__\n    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)\npydantic_core._pydantic_core.ValidationError: 1 validation error for SQLDatabaseToolkit\nllm\n  Field required [type=missing, input_value={'db': <langchain_communi... at 0x000001DF96C4BDF0>}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.11/v/missing\n",
+                "columns_used": [],
+                "feedback": "incorrect",
+                "corrected_query": null,
+                "corrected_columns": null,
+                "column_mapping": {}
+            }
+        },
+        {
+            "role": "user",
+            "content": "How many tickets created in 2024 had a Derived Metrics violation in 2024"
+        },
+        {
+            "role": "assistant",
+            "content": {
+                "error": "An error occurred during agent execution: 1 validation error for SQLDatabaseToolkit\nllm\n  Field required [type=missing, input_value={'db': <langchain_communi... at 0x000001DF80235600>}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.11/v/missing\n\nTraceback:\nTraceback (most recent call last):\n  File \"D:\\vscode\\GeminiSQL-main\\app\\main.py\", line 146, in <module>\n    agent = create_sql_agent(\n  File \"D:\\vscode\\GeminiSQL-main\\app\\utils\\agent_utils.py\", line 28, in create_sql_agent\n    toolkit = SQLDatabaseToolkit(db=db)\n  File \"D:\\vscode\\GeminiSQL-main\\app\\.venv\\lib\\site-packages\\pydantic\\main.py\", line 253, in __init__\n    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)\npydantic_core._pydantic_core.ValidationError: 1 validation error for SQLDatabaseToolkit\nllm\n  Field required [type=missing, input_value={'db': <langchain_communi... at 0x000001DF80235600>}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.11/v/missing\n",
+                "columns_used": [],
+                "feedback": "incorrect",
+                "corrected_query": null,
+                "corrected_columns": null,
+                "column_mapping": {}
+            }
+        },
+        {
+            "role": "user",
+            "content": "How many tickets created in 2024 had a Derived Metrics violation in 2024"
+        },
+        {
+            "role": "assistant",
+            "content": {
+                "error": "An error occurred during agent execution: 1 validation error for SQLDatabaseToolkit\nllm\n  Field required [type=missing, input_value={'db': <langchain_communi... at 0x000001DF918EBB80>}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.11/v/missing\n\nTraceback:\nTraceback (most recent call last):\n  File \"D:\\vscode\\GeminiSQL-main\\app\\main.py\", line 146, in <module>\n    agent = create_sql_agent(\n  File \"D:\\vscode\\GeminiSQL-main\\app\\utils\\agent_utils.py\", line 28, in create_sql_agent\n    toolkit = SQLDatabaseToolkit(db=db)\n  File \"D:\\vscode\\GeminiSQL-main\\app\\.venv\\lib\\site-packages\\pydantic\\main.py\", line 253, in __init__\n    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)\npydantic_core._pydantic_core.ValidationError: 1 validation error for SQLDatabaseToolkit\nllm\n  Field required [type=missing, input_value={'db': <langchain_communi... at 0x000001DF918EBB80>}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.11/v/missing\n",
+                "columns_used": [],
+                "feedback": "incorrect",
+                "corrected_query": null,
+                "corrected_columns": null,
+                "column_mapping": {}
+            }
+        },
+        {
+            "role": "user",
+            "content": "How many tickets created in 2024 had a Derived Metrics violation in 2024, use create_time column"
+        },
+        {
+            "role": "assistant",
+            "content": {
+                "sql_query": "SELECT\n  COUNT(*)\nFROM\n  ytflow_api_tickets\nWHERE\n  EXTRACT(YEAR FROM create_date) = 2024\n  AND derived_metrics IS NOT NULL\nLIMIT 100",
+                "error": "Table 'create_date' not found in schema. Available tables are: external_aggregated_api_usage, ytflow_api_tickets",
+                "columns_used": [],
+                "feedback": "incorrect",
+                "corrected_query": null,
+                "corrected_columns": null,
+                "column_mapping": {}
+            }
+        },
+        {
+            "role": "user",
+            "content": "How many tickets created in 2024 had a Derived Metrics violation in 2024"
+        },
+        {
+            "role": "assistant",
+            "content": {
+                "sql_query": "SELECT\n  COUNT(*)\nFROM\n  ytflow_api_tickets\nWHERE\n  EXTRACT(YEAR FROM create_date) = 2024\n  AND derived_metrics IS NOT NULL\nLIMIT 100",
+                "error": "Table 'create_date' not found in schema. Available tables are: external_aggregated_api_usage, ytflow_api_tickets",
+                "columns_used": [],
+                "feedback": "incorrect",
+                "corrected_query": null,
+                "corrected_columns": null,
+                "column_mapping": {}
+            }
+        },
+        {
+            "role": "user",
+            "content": "How many tickets created in 2024 had a Derived Metrics violation in 2024"
+        },
+        {
+            "role": "assistant",
+            "content": {
+                "sql_query": "SELECT\n  COUNT(*)\nFROM\n  ytflow_api_tickets\nWHERE\n  EXTRACT(YEAR FROM create_date) = 2024\n  AND derived_metrics IS NOT NULL\nLIMIT 100",
+                "error": "Table 'create_date' not found in schema. Available tables are: external_aggregated_api_usage, ytflow_api_tickets",
+                "columns_used": [],
+                "feedback": "incorrect",
+                "corrected_query": null,
+                "corrected_columns": null,
+                "column_mapping": {}
+            }
+        },
+        {
+            "role": "user",
+            "content": "How many tickets created in 2024 had a Derived Metrics violation in 2024"
+        },
+        {
+            "role": "assistant",
+            "content": {
+                "sql_query": "SELECT\n  COUNT(*)\nFROM\n  ytflow_api_tickets\nWHERE\n  EXTRACT(YEAR FROM create_date) = 2024\n  AND derived_metrics IS NOT NULL\nLIMIT 100",
+                "error": "Table 'create_date' not found in schema. Available tables are: external_aggregated_api_usage, ytflow_api_tickets",
+                "columns_used": [],
+                "feedback": "incorrect",
+                "corrected_query": null,
+                "corrected_columns": null,
+                "column_mapping": {}
+            }
+        },
+        {
+            "role": "user",
+            "content": "How many tickets created in 2024 had a Derived Metrics violation in 2024"
+        },
+        {
+            "role": "assistant",
+            "content": {
+                "sql_query": "SELECT\n  COUNT(*)\nFROM\n  ytflow_api_tickets\nWHERE\n  EXTRACT(YEAR FROM create_date) = 2024\n  AND derived_metrics IS NOT NULL\nLIMIT 100",
+                "error": "Table 'create_date' not found in schema. Available tables: external_aggregated_api_usage, ytflow_api_tickets",
+                "columns_used": [],
+                "feedback": "incorrect",
+                "corrected_query": null,
+                "corrected_columns": null,
+                "column_mapping": {}
+            }
+        },
+        {
+            "role": "user",
+            "content": "Give me the valid quota ticket details of the company ViewStats"
+        },
+        {
+            "role": "assistant",
+            "content": {
+                "sql_query": "SELECT\n  *\nFROM\n  ytflow_api_tickets\nWHERE\n  LOWER(developer_organization_name) LIKE '%viewstats%'\n  AND LOWER(ticket_classification) LIKE '%quota%'\nLIMIT 100",
+                "columns_used": [
+                    "ticket_classification",
+                    "developer_organization_name"
+                ],
+                "feedback": null,
+                "corrected_query": null,
+                "corrected_columns": null,
+                "column_mapping": {
+                    "ticket_classification": 1,
+                    "developer_organization_name": 1
+                },
+                "result": {
+                    "index": [],
+                    "columns": [
+                        "ticket_id",
+                        "project_number",
+                        "multiple_project_list",
+                        "developer_organization_name",
+                        "ticket_status",
+                        "ticket_classification",
+                        "ticket_compliance_status",
+                        "create_time",
+                        "resolve_time",
+                        "business_classification",
+                        "business_use_case",
+                        "labels",
+                        "violations",
+                        "investigate_reason",
+                        "additional_quota_requested",
+                        "ticket_progress_stage",
+                        "state",
+                        "developer_name",
+                        "developer_website",
+                        "developer_email_address",
+                        "country_code",
+                        "google_representative",
+                        "is_partner",
+                        "create_date",
+                        "resolve_date",
+                        "public_private_api",
+                        "derived_metrics",
+                        "change_control_date",
+                        "change_control_aquiror_rep_name",
+                        "developer_changed_use_case_form",
+                        "changed_use_case_by_auditor",
+                        "assignee",
+                        "agent_ldap",
+                        "agent_team",
+                        "duplicate_of_ticket",
+                        "agent_audit_decision",
+                        "ticket_decision_reason",
+                        "need_agent_review",
+                        "reason_for_rejection",
+                        "YTRP_previous_approval",
+                        "YTRP_details_changed",
+                        "YTRP_organization_manual_entry",
+                        "YTRP_researcher_country",
+                        "YTRP_researcher_job_title",
+                        "YTRP_job_title_manual_entry",
+                        "YTRP_research_title",
+                        "YTRP_field_of_research",
+                        "YTRP_research_proposal",
+                        "YTRP_research_category",
+                        "YTRP_research_topic",
+                        "YTRP_research_subtopic",
+                        "YTRP_sponsored_entity_yes_no",
+                        "YTRP_sponsored_entity",
+                        "YTRP_sanctions_approval",
+                        "YTRP_government_approval",
+                        "YTRP_research_start_date",
+                        "YTRP_research_publication_date"
+                    ],
+                    "data": []
+                }
+            }
+        },
+        {
+            "role": "user",
+            "content": "How many tickets created in 2024 had a Derived Metrics violation in 2024"
+        },
+        {
+            "role": "assistant",
+            "content": {
+                "sql_query": "SELECT\n  COUNT(*)\nFROM\n  ytflow_api_tickets\nWHERE\n  EXTRACT(YEAR FROM create_date) = 2024\n  AND derived_metrics IS NOT NULL\nLIMIT 100",
+                "columns_used": [
+                    "create_date",
+                    "derived_metrics"
+                ],
+                "feedback": "corrected",
+                "corrected_query": "SELECT COUNT(DISTINCT ticket_id) AS number_of_tickets\nFROM yt_contentorg_api_compliance.ytflow_api_tickets AS t\nWHERE EXTRACT(YEAR FROM t.create_time) = 2024 AND lower(t.violations) LIKE '%derived metrics%'",
+                "corrected_columns": [],
+                "column_mapping": {
+                    "create_date": -2,
+                    "derived_metrics": -2
+                },
+                "result": {
+                    "index": [
+                        0
+                    ],
+                    "columns": [
+                        "count_star()"
+                    ],
+                    "data": [
+                        [
+                            293
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "role": "user",
+            "content": "How many tickets created in 2024 had a Derived Metrics violation in 2024"
+        },
+        {
+            "role": "assistant",
+            "content": {
+                "sql_query": "SELECT COUNT(DISTINCT ticket_id) AS number_of_tickets\nFROM ytflow_api_tickets AS t\nWHERE EXTRACT(YEAR FROM t.create_time) = 2024 AND lower(t.violations) LIKE '%derived metrics%'",
+                "result": "An error occurred during query execution: (duckdb.duckdb.BinderException) Binder Error: No function matches the given name and argument types 'date_part(STRING_LITERAL, BIGINT)'. You might need to add explicit type casts.\n\tCandidate functions:\n\tdate_part(VARCHAR[], DATE) -> STRUCT()\n\tdate_part(VARCHAR[], INTERVAL) -> STRUCT()\n\tdate_part(VARCHAR[], TIME) -> STRUCT()\n\tdate_part(VARCHAR[], TIMESTAMP) -> STRUCT()\n\tdate_part(VARCHAR[], TIME WITH TIME ZONE) -> STRUCT()\n\tdate_part(VARCHAR, DATE) -> BIGINT\n\tdate_part(VARCHAR, INTERVAL) -> BIGINT\n\tdate_part(VARCHAR, TIME) -> BIGINT\n\tdate_part(VARCHAR, TIMESTAMP) -> BIGINT\n\tdate_part(VARCHAR, TIME WITH TIME ZONE) -> BIGINT\n\tdate_part(VARCHAR[], TIMESTAMP WITH TIME ZONE) -> STRUCT()\n\tdate_part(VARCHAR, TIMESTAMP WITH TIME ZONE) -> BIGINT\n\n\nLINE 3: WHERE EXTRACT(YEAR FROM t.create_time) = 2024 AND lower(t.violations...\n              ^\n[SQL: SELECT COUNT(DISTINCT ticket_id) AS number_of_tickets\nFROM ytflow_api_tickets AS t\nWHERE EXTRACT(YEAR FROM t.create_time) = 2024 AND lower(t.violations) LIKE '%derived metrics%']\n(Background on this error at: https://sqlalche.me/e/20/f405)\n\nTraceback:\nTraceback (most recent call last):\n  File \"D:\\vscode\\GeminiSQL-main\\app\\.venv\\lib\\site-packages\\sqlalchemy\\engine\\base.py\", line 1963, in _exec_single_context\n    self.dialect.do_execute(\n  File \"D:\\vscode\\GeminiSQL-main\\app\\.venv\\lib\\site-packages\\sqlalchemy\\engine\\default.py\", line 943, in do_execute\n    cursor.execute(statement, parameters)\n  File \"D:\\vscode\\GeminiSQL-main\\app\\.venv\\lib\\site-packages\\duckdb_engine\\__init__.py\", line 150, in execute\n    self.__c.execute(statement, parameters)\nduckdb.duckdb.BinderException: Binder Error: No function matches the given name and argument types 'date_part(STRING_LITERAL, BIGINT)'. You might need to add explicit type casts.\n\tCandidate functions:\n\tdate_part(VARCHAR[], DATE) -> STRUCT()\n\tdate_part(VARCHAR[], INTERVAL) -> STRUCT()\n\tdate_part(VARCHAR[], TIME) -> STRUCT()\n\tdate_part(VARCHAR[], TIMESTAMP) -> STRUCT()\n\tdate_part(VARCHAR[], TIME WITH TIME ZONE) -> STRUCT()\n\tdate_part(VARCHAR, DATE) -> BIGINT\n\tdate_part(VARCHAR, INTERVAL) -> BIGINT\n\tdate_part(VARCHAR, TIME) -> BIGINT\n\tdate_part(VARCHAR, TIMESTAMP) -> BIGINT\n\tdate_part(VARCHAR, TIME WITH TIME ZONE) -> BIGINT\n\tdate_part(VARCHAR[], TIMESTAMP WITH TIME ZONE) -> STRUCT()\n\tdate_part(VARCHAR, TIMESTAMP WITH TIME ZONE) -> BIGINT\n\n\nLINE 3: WHERE EXTRACT(YEAR FROM t.create_time) = 2024 AND lower(t.violations...\n              ^\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"D:\\vscode\\GeminiSQL-main\\app\\main.py\", line 209, in <module>\n    result_df = pd.read_sql(sql_query, conn)\n  File \"D:\\vscode\\GeminiSQL-main\\app\\.venv\\lib\\site-packages\\pandas\\io\\sql.py\", line 736, in read_sql\n    return pandas_sql.read_query(\n  File \"D:\\vscode\\GeminiSQL-main\\app\\.venv\\lib\\site-packages\\pandas\\io\\sql.py\", line 1848, in read_query\n    result = self.execute(sql, params)\n  File \"D:\\vscode\\GeminiSQL-main\\app\\.venv\\lib\\site-packages\\pandas\\io\\sql.py\", line 1671, in execute\n    return self.con.exec_driver_sql(sql, *args)\n  File \"D:\\vscode\\GeminiSQL-main\\app\\.venv\\lib\\site-packages\\sqlalchemy\\engine\\base.py\", line 1775, in exec_driver_sql\n    ret = self._execute_context(\n  File \"D:\\vscode\\GeminiSQL-main\\app\\.venv\\lib\\site-packages\\sqlalchemy\\engine\\base.py\", line 1842, in _execute_context\n    return self._exec_single_context(\n  File \"D:\\vscode\\GeminiSQL-main\\app\\.venv\\lib\\site-packages\\sqlalchemy\\engine\\base.py\", line 1982, in _exec_single_context\n    self._handle_dbapi_exception(\n  File \"D:\\vscode\\GeminiSQL-main\\app\\.venv\\lib\\site-packages\\sqlalchemy\\engine\\base.py\", line 2351, in _handle_dbapi_exception\n    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e\n  File \"D:\\vscode\\GeminiSQL-main\\app\\.venv\\lib\\site-packages\\sqlalchemy\\engine\\base.py\", line 1963, in _exec_single_context\n    self.dialect.do_execute(\n  File \"D:\\vscode\\GeminiSQL-main\\app\\.venv\\lib\\site-packages\\sqlalchemy\\engine\\default.py\", line 943, in do_execute\n    cursor.execute(statement, parameters)\n  File \"D:\\vscode\\GeminiSQL-main\\app\\.venv\\lib\\site-packages\\duckdb_engine\\__init__.py\", line 150, in execute\n    self.__c.execute(statement, parameters)\nsqlalchemy.exc.ProgrammingError: (duckdb.duckdb.BinderException) Binder Error: No function matches the given name and argument types 'date_part(STRING_LITERAL, BIGINT)'. You might need to add explicit type casts.\n\tCandidate functions:\n\tdate_part(VARCHAR[], DATE) -> STRUCT()\n\tdate_part(VARCHAR[], INTERVAL) -> STRUCT()\n\tdate_part(VARCHAR[], TIME) -> STRUCT()\n\tdate_part(VARCHAR[], TIMESTAMP) -> STRUCT()\n\tdate_part(VARCHAR[], TIME WITH TIME ZONE) -> STRUCT()\n\tdate_part(VARCHAR, DATE) -> BIGINT\n\tdate_part(VARCHAR, INTERVAL) -> BIGINT\n\tdate_part(VARCHAR, TIME) -> BIGINT\n\tdate_part(VARCHAR, TIMESTAMP) -> BIGINT\n\tdate_part(VARCHAR, TIME WITH TIME ZONE) -> BIGINT\n\tdate_part(VARCHAR[], TIMESTAMP WITH TIME ZONE) -> STRUCT()\n\tdate_part(VARCHAR, TIMESTAMP WITH TIME ZONE) -> BIGINT\n\n\nLINE 3: WHERE EXTRACT(YEAR FROM t.create_time) = 2024 AND lower(t.violations...\n              ^\n[SQL: SELECT COUNT(DISTINCT ticket_id) AS number_of_tickets\nFROM ytflow_api_tickets AS t\nWHERE EXTRACT(YEAR FROM t.create_time) = 2024 AND lower(t.violations) LIKE '%derived metrics%']\n(Background on this error at: https://sqlalche.me/e/20/f405)\n",
+                "columns_used": [
+                    "violations",
+                    "create_time"
+                ],
+                "feedback": "incorrect",
+                "corrected_query": null,
+                "corrected_columns": null,
+                "column_mapping": {
+                    "violations": 1,
+                    "create_time": 1
+                }
+            }
+        },
+        {
+            "role": "user",
+            "content": "How many tickets created in 2024 had a Derived Metrics violation in 2024"
+        },
+        {
+            "role": "user",
+            "content": "How many tickets created in 2024 had a Derived Metrics violation in 2024"
+        },
+        {
+            "role": "user",
+            "content": "Give me the valid quota ticket details of the company ViewStats"
+        },
+        {
+            "role": "user",
+            "content": "For project_number '775513731180', tell me the average quota used over the last 90 days and the quota allocated"
+        },
+        {
+            "role": "assistant",
+            "content": {
+                "sql_query": "SELECT\n  AVG(total_quota) AS average_quota_used_last_90_days,\n  MAX(quota_allocated) AS quota_allocated\nFROM external_aggregated_api_usage\nWHERE\n  project_number = 775513731180\n  AND _PARTITION_DATE >= CURRENT_DATE - INTERVAL '90 days'\nLIMIT 100;",
+                "columns_used": [
+                    "project_number",
+                    "_PARTITION_DATE"
+                ],
+                "feedback": "corrected",
+                "corrected_query": "WITH\n  _0 AS (\n    SELECT\n      t._PARTITION_DATE,\n      t.project_number,\n      t.quota_allocated,\n      SUM(t.quota_success) AS quota_used,\n    FROM external_aggregated_api_usage AS t\n    WHERE CAST(t.project_number AS STRING) = '775513731180'\n    GROUP BY 1, 2, 3\n    ORDER BY 1 DESC\n  )\nSELECT AVG(quota_used) AS avg_quota_used, MAX(quota_allocated) AS quota_allocated\nFROM _0",
+                "corrected_columns": [],
+                "column_mapping": {
+                    "project_number": -2,
+                    "_PARTITION_DATE": -2
+                },
+                "result": {
+                    "index": [
+                        0
+                    ],
+                    "columns": [
+                        "average_quota_used_last_90_days",
+                        "quota_allocated"
+                    ],
+                    "data": [
+                        [
+                            4983441.006040637,
+                            244000000
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "role": "user",
+            "content": "How many tickets created in 2024 had a Derived Metrics violation in 2023"
+        },
+        {
+            "role": "assistant",
+            "content": {
+                "sql_query": "SELECT COUNT(DISTINCT ticket_id) AS number_of_tickets\nFROM ytflow_api_tickets AS t\nWHERE EXTRACT(YEAR FROM t.create_time) = 2024 AND lower(t.violations) LIKE '%derived metrics%'",
+                "error": "Table 't' not found in schema. Available tables: external_aggregated_api_usage, ytflow_api_tickets",
+                "columns_used": [],
+                "feedback": "incorrect",
+                "corrected_query": null,
+                "corrected_columns": null,
+                "column_mapping": {}
+            }
+        },
+        {
+            "role": "user",
+            "content": " How many tickets created in 2024 had a Derived Metrics violation in 2023"
+        },
+        {
+            "role": "assistant",
+            "content": {
+                "sql_query": "SELECT COUNT(DISTINCT ticket_id) AS number_of_tickets\nFROM ytflow_api_tickets\nWHERE EXTRACT(YEAR FROM create_date) = 2024 AND LOWER(violations) LIKE '%derived metrics%'\nLIMIT 100",
+                "error": "Table 'create_date' not found in schema. Available tables: external_aggregated_api_usage, ytflow_api_tickets",
+                "columns_used": [],
+                "feedback": "incorrect",
+                "corrected_query": null,
+                "corrected_columns": null,
+                "column_mapping": {}
+            }
+        },
+        {
+            "role": "user",
+            "content": "How many tickets created in 2024 had a Derived Metrics violation in 2023"
+        },
+        {
+            "role": "assistant",
+            "content": {
+                "sql_query": "SELECT COUNT(DISTINCT ticket_id) AS number_of_tickets\nFROM ytflow_api_tickets\nWHERE EXTRACT(YEAR FROM create_date) = 2024 AND LOWER(violations) LIKE '%derived metrics%'\nLIMIT 100",
+                "columns_used": [
+                    "create_date",
+                    "violations"
+                ],
+                "feedback": null,
+                "corrected_query": null,
+                "corrected_columns": null,
+                "column_mapping": {
+                    "create_date": 1,
+                    "violations": 1
+                },
+                "result": {
+                    "index": [
+                        0
+                    ],
+                    "columns": [
+                        "number_of_tickets"
+                    ],
+                    "data": [
+                        [
+                            511
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "role": "user",
+            "content": "How many tickets created in 2024 had a Derived Metrics violation in 2024"
+        },
+        {
+            "role": "assistant",
+            "content": {
+                "sql_query": "SELECT COUNT(DISTINCT ticket_id) AS number_of_tickets\nFROM ytflow_api_tickets\nWHERE EXTRACT(YEAR FROM create_date) = 2024 AND LOWER(violations) LIKE '%derived metrics%'\nLIMIT 100",
+                "columns_used": [
+                    "create_date",
+                    "violations"
+                ],
+                "feedback": null,
+                "corrected_query": null,
+                "corrected_columns": null,
+                "column_mapping": {
+                    "create_date": 1,
+                    "violations": 1
+                },
+                "result": {
+                    "index": [
+                        0
+                    ],
+                    "columns": [
+                        "number_of_tickets"
+                    ],
+                    "data": [
+                        [
+                            511
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "role": "user",
+            "content": "Show me all closed and granted quota ticket details for companies 'Spotter' and 'VidIQ'"
+        },
+        {
+            "role": "assistant",
+            "content": {
+                "sql_query": "SELECT\n  ticket_id,\n  project_number,\n  developer_organization_name,\n  ticket_status,\n  ticket_classification,\n  ticket_compliance_status,\n  create_date,\n  resolve_date\nFROM ytflow_api_tickets\nWHERE\n  LOWER(ticket_status) = 'closed'\n  AND LOWER(ticket_classification) = 'quota'\n  AND (\n    LOWER(developer_organization_name) LIKE '%spotter%'\n    OR LOWER(developer_organization_name) LIKE '%vidiq%'\n  )\nLIMIT 100",
+                "columns_used": [
+                    "ticket_status",
+                    "ticket_classification",
+                    "ticket_id",
+                    "resolve_date",
+                    "project_number",
+                    "developer_organization_name",
+                    "create_date",
+                    "ticket_compliance_status"
+                ],
+                "feedback": null,
+                "corrected_query": null,
+                "corrected_columns": null,
+                "column_mapping": {
+                    "ticket_status": 1,
+                    "ticket_classification": 1,
+                    "ticket_id": 1,
+                    "resolve_date": 1,
+                    "project_number": 1,
+                    "developer_organization_name": 1,
+                    "create_date": 1,
+                    "ticket_compliance_status": 1
+                },
+                "result": {
+                    "index": [
+                        0,
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8
+                    ],
+                    "columns": [
+                        "ticket_id",
+                        "project_number",
+                        "developer_organization_name",
+                        "ticket_status",
+                        "ticket_classification",
+                        "ticket_compliance_status",
+                        "create_date",
+                        "resolve_date"
+                    ],
+                    "data": [
+                        [
+                            "T59-100441337",
+                            "327046885910",
+                            "Spotter, Inc.",
+                            "CLOSED",
+                            "quota",
+                            "TRUST",
+                            "2023-05-30 00:00:00",
+                            "2023-06-28 00:00:00"
+                        ],
+                        [
+                            "T59-100441337",
+                            "801870353488",
+                            "Spotter, Inc.",
+                            "CLOSED",
+                            "quota",
+                            "TRUST",
+                            "2023-05-30 00:00:00",
+                            "2023-06-28 00:00:00"
+                        ],
+                        [
+                            "T59-95436341",
+                            "928183395842",
+                            "vidIQ, Inc",
+                            "CLOSED",
+                            "quota",
+                            "TRUST",
+                            "2023-02-15 00:00:00",
+                            "2023-03-21 00:00:00"
+                        ],
+                        [
+                            "T59-100482849",
+                            "327046885910",
+                            "Spotter, Inc.",
+                            "CLOSED",
+                            "quota",
+                            "REJECT",
+                            "2023-05-31 00:00:00",
+                            "2023-05-31 00:00:00"
+                        ],
+                        [
+                            "T59-100482849",
+                            "88703927772",
+                            "Spotter, Inc.",
+                            "CLOSED",
+                            "quota",
+                            "REJECT",
+                            "2023-05-31 00:00:00",
+                            "2023-05-31 00:00:00"
+                        ],
+                        [
+                            "T59-100482849",
+                            "1062282822254",
+                            "Spotter, Inc.",
+                            "CLOSED",
+                            "quota",
+                            "REJECT",
+                            "2023-05-31 00:00:00",
+                            "2023-05-31 00:00:00"
+                        ],
+                        [
+                            "T59-100482849",
+                            "111046908511",
+                            "Spotter, Inc.",
+                            "CLOSED",
+                            "quota",
+                            "REJECT",
+                            "2023-05-31 00:00:00",
+                            "2023-05-31 00:00:00"
+                        ],
+                        [
+                            "T59-100482849",
+                            "54206098431",
+                            "Spotter, Inc.",
+                            "CLOSED",
+                            "quota",
+                            "REJECT",
+                            "2023-05-31 00:00:00",
+                            "2023-05-31 00:00:00"
+                        ],
+                        [
+                            "T59-100482849",
+                            "801870353488",
+                            "Spotter, Inc.",
+                            "CLOSED",
+                            "quota",
+                            "REJECT",
+                            "2023-05-31 00:00:00",
+                            "2023-05-31 00:00:00"
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "role": "user",
+            "content": "Show me all closed and granted quota ticket details for developer organization 'Spotter' and 'VidIQ'"
+        },
+        {
+            "role": "assistant",
+            "content": {
+                "sql_query": "SELECT\n  ticket_id,\n  project_number,\n  developer_organization_name,\n  ticket_status,\n  ticket_classification,\n  ticket_compliance_status,\n  create_date,\n  resolve_date\nFROM ytflow_api_tickets\nWHERE\n  LOWER(ticket_status) = 'closed'\n  AND LOWER(ticket_classification) = 'quota'\n  AND (\n    LOWER(developer_organization_name) LIKE '%spotter%'\n    OR LOWER(developer_organization_name) LIKE '%vidiq%'\n  )\nLIMIT 100",
+                "columns_used": [
+                    "ticket_status",
+                    "ticket_classification",
+                    "ticket_id",
+                    "resolve_date",
+                    "project_number",
+                    "developer_organization_name",
+                    "create_date",
+                    "ticket_compliance_status"
+                ],
+                "feedback": null,
+                "corrected_query": null,
+                "corrected_columns": null,
+                "column_mapping": {
+                    "ticket_status": 1,
+                    "ticket_classification": 1,
+                    "ticket_id": 1,
+                    "resolve_date": 1,
+                    "project_number": 1,
+                    "developer_organization_name": 1,
+                    "create_date": 1,
+                    "ticket_compliance_status": 1
+                },
+                "result": {
+                    "index": [
+                        0,
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8
+                    ],
+                    "columns": [
+                        "ticket_id",
+                        "project_number",
+                        "developer_organization_name",
+                        "ticket_status",
+                        "ticket_classification",
+                        "ticket_compliance_status",
+                        "create_date",
+                        "resolve_date"
+                    ],
+                    "data": [
+                        [
+                            "T59-100441337",
+                            "327046885910",
+                            "Spotter, Inc.",
+                            "CLOSED",
+                            "quota",
+                            "TRUST",
+                            "2023-05-30 00:00:00",
+                            "2023-06-28 00:00:00"
+                        ],
+                        [
+                            "T59-100441337",
+                            "801870353488",
+                            "Spotter, Inc.",
+                            "CLOSED",
+                            "quota",
+                            "TRUST",
+                            "2023-05-30 00:00:00",
+                            "2023-06-28 00:00:00"
+                        ],
+                        [
+                            "T59-95436341",
+                            "928183395842",
+                            "vidIQ, Inc",
+                            "CLOSED",
+                            "quota",
+                            "TRUST",
+                            "2023-02-15 00:00:00",
+                            "2023-03-21 00:00:00"
+                        ],
+                        [
+                            "T59-100482849",
+                            "327046885910",
+                            "Spotter, Inc.",
+                            "CLOSED",
+                            "quota",
+                            "REJECT",
+                            "2023-05-31 00:00:00",
+                            "2023-05-31 00:00:00"
+                        ],
+                        [
+                            "T59-100482849",
+                            "88703927772",
+                            "Spotter, Inc.",
+                            "CLOSED",
+                            "quota",
+                            "REJECT",
+                            "2023-05-31 00:00:00",
+                            "2023-05-31 00:00:00"
+                        ],
+                        [
+                            "T59-100482849",
+                            "1062282822254",
+                            "Spotter, Inc.",
+                            "CLOSED",
+                            "quota",
+                            "REJECT",
+                            "2023-05-31 00:00:00",
+                            "2023-05-31 00:00:00"
+                        ],
+                        [
+                            "T59-100482849",
+                            "111046908511",
+                            "Spotter, Inc.",
+                            "CLOSED",
+                            "quota",
+                            "REJECT",
+                            "2023-05-31 00:00:00",
+                            "2023-05-31 00:00:00"
+                        ],
+                        [
+                            "T59-100482849",
+                            "54206098431",
+                            "Spotter, Inc.",
+                            "CLOSED",
+                            "quota",
+                            "REJECT",
+                            "2023-05-31 00:00:00",
+                            "2023-05-31 00:00:00"
+                        ],
+                        [
+                            "T59-100482849",
+                            "801870353488",
+                            "Spotter, Inc.",
+                            "CLOSED",
+                            "quota",
+                            "REJECT",
+                            "2023-05-31 00:00:00",
+                            "2023-05-31 00:00:00"
+                        ]
+                    ]
+                }
+            }
+        }
+    ],
+    "column_usage_counts": {
+        "resolve_date": 0,
+        "ticket_status": 0,
+        "developer_organization_name": 0,
+        "additional_quota_requested": 0,
+        "ticket_classification": 0,
+        "project_number": 0,
+        "ticket_id": 0,
+        "ticket_compliance_status": 0,
+        "create_date": 0,
+        "derived_metrics": 0,
+        "_PARTITION_DATE": 0
+    }
+}
